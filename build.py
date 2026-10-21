@@ -35,7 +35,7 @@ T = {
 "en": {
  "title": "Max (f1devbin): open-source tools and honest crypto research",
  "desc": "Projects by Max (f1devbin): Crypto Research Labs, an open lab that tests crypto trading ideas honestly; Telegram Bot Manager, a free browser tool for Telegram bots; My IP & Geo, a KDE Plasma 6 network widget.",
- "lead": "Self-taught developer. I build tools that run on my own home servers: Telegram bots, monitoring dashboards, KDE Plasma widgets and an honest research lab for crypto trading ideas. Everything here is free and open source.",
+ "lead": "Programmer by education and an electronics engineer with many years of experience. I build tools that run on my own home servers: Telegram bots, monitoring dashboards, KDE Plasma widgets and an honest research lab for crypto trading ideas. Everything here is free and open source.",
  "projects": "Projects", "open": "Open", "download": "Download", "source": "Source code",
  "crl": "Every trading idea is written down and locked before it is tested, then re-tested automatically on new data. A live dashboard, a market diagnosis in plain words, a weekly digest and a beginners' course in 7 languages. Negative results are published too.",
  "tbm": "Manage a Telegram bot right in the browser: set, check and delete webhooks, edit commands, name, description, avatar, menu button and admin rights. No code, no install, no backend.",
@@ -49,7 +49,7 @@ T = {
 "ru": {
  "title": "Макс (f1devbin): открытые инструменты и честные исследования крипты",
  "desc": "Проекты Макса (f1devbin): Crypto Research Labs — открытая лаборатория честной проверки торговых идей для криптовалют; Telegram Bot Manager — бесплатный инструмент для Telegram-ботов в браузере; My IP & Geo — сетевой виджет для KDE Plasma 6.",
- "lead": "Разработчик-самоучка. Делаю инструменты, которые работают на моих домашних серверах: Telegram-боты, дашборды мониторинга, виджеты KDE Plasma и лабораторию честной проверки торговых идей для криптовалют. Всё здесь бесплатно и с открытым кодом.",
+ "lead": "Программист по образованию, много лет работаю инженером-электроником. Делаю инструменты, которые работают на моих домашних серверах: Telegram-боты, дашборды мониторинга, виджеты KDE Plasma и лабораторию честной проверки торговых идей для криптовалют. Всё здесь бесплатно и с открытым кодом.",
  "projects": "Проекты", "open": "Открыть", "download": "Скачать", "source": "Исходный код",
  "crl": "Каждая торговая идея записывается и фиксируется до проверки, а потом автоматически перепроверяется на новых данных. Живой дашборд, диагноз рынка простыми словами, недельные сводки и курс для новичков на 7 языках. Отрицательные результаты тоже публикуются.",
  "tbm": "Управление Telegram-ботом прямо в браузере: установка, проверка и удаление вебхуков, команды, имя, описание, аватар, кнопка меню и права администратора. Без кода, без установки, без сервера.",
@@ -63,7 +63,7 @@ T = {
 "es": {
  "title": "Max (f1devbin): herramientas de código abierto e investigación cripto honesta",
  "desc": "Proyectos de Max (f1devbin): Crypto Research Labs, un laboratorio abierto que prueba ideas de trading cripto con honestidad; Telegram Bot Manager, una herramienta gratuita para bots de Telegram en el navegador; My IP & Geo, un widget de red para KDE Plasma 6.",
- "lead": "Desarrollador autodidacta. Creo herramientas que funcionan en mis propios servidores domésticos: bots de Telegram, paneles de monitorización, widgets de KDE Plasma y un laboratorio honesto de ideas de trading cripto. Todo es gratuito y de código abierto.",
+ "lead": "Programador de formación e ingeniero electrónico con muchos años de experiencia. Creo herramientas que funcionan en mis propios servidores domésticos: bots de Telegram, paneles de monitorización, widgets de KDE Plasma y un laboratorio honesto de ideas de trading cripto. Todo es gratuito y de código abierto.",
  "projects": "Proyectos", "open": "Abrir", "download": "Descargar", "source": "Código fuente",
  "crl": "Cada idea de trading se escribe y se fija antes de probarla, y luego se vuelve a probar automáticamente con datos nuevos. Panel en vivo, diagnóstico del mercado en palabras sencillas, resumen semanal y curso para principiantes en 7 idiomas. También se publican los resultados negativos.",
  "tbm": "Gestiona un bot de Telegram en el navegador: configura, comprueba y elimina webhooks, edita comandos, nombre, descripción, avatar, botón de menú y permisos de administrador. Sin código, sin instalación, sin servidor.",
@@ -77,7 +77,7 @@ T = {
 "pt": {
  "title": "Max (f1devbin): ferramentas de código aberto e pesquisa cripto honesta",
  "desc": "Projetos de Max (f1devbin): Crypto Research Labs, um laboratório aberto que testa ideias de trading cripto com honestidade; Telegram Bot Manager, uma ferramenta gratuita para bots do Telegram no navegador; My IP & Geo, um widget de rede para KDE Plasma 6.",
- "lead": "Desenvolvedor autodidata. Crio ferramentas que rodam nos meus próprios servidores domésticos: bots do Telegram, painéis de monitoramento, widgets do KDE Plasma e um laboratório honesto de ideias de trading cripto. Tudo aqui é gratuito e de código aberto.",
+ "lead": "Programador por formação e engenheiro eletrônico há muitos anos. Crio ferramentas que rodam nos meus próprios servidores domésticos: bots do Telegram, painéis de monitoramento, widgets do KDE Plasma e um laboratório honesto de ideias de trading cripto. Tudo aqui é gratuito e de código aberto.",
  "projects": "Projetos", "open": "Abrir", "download": "Baixar", "source": "Código-fonte",
  "crl": "Cada ideia de trading é escrita e travada antes do teste e depois retestada automaticamente com dados novos. Painel ao vivo, diagnóstico do mercado em palavras simples, resumo semanal e curso para iniciantes em 7 idiomas. Resultados negativos também são publicados.",
  "tbm": "Gerencie um bot do Telegram no navegador: defina, verifique e apague webhooks, edite comandos, nome, descrição, avatar, botão de menu e permissões de administrador. Sem código, sem instalação, sem servidor.",
@@ -91,7 +91,7 @@ T = {
 "tr": {
  "title": "Max (f1devbin): açık kaynak araçlar ve dürüst kripto araştırmaları",
  "desc": "Max'in (f1devbin) projeleri: kripto işlem fikirlerini dürüstçe test eden açık laboratuvar Crypto Research Labs; Telegram botları için ücretsiz tarayıcı aracı Telegram Bot Manager; KDE Plasma 6 için ağ bileşeni My IP & Geo.",
- "lead": "Kendi kendini yetiştirmiş bir geliştiriciyim. Kendi ev sunucularımda çalışan araçlar yapıyorum: Telegram botları, izleme panelleri, KDE Plasma bileşenleri ve kripto işlem fikirleri için dürüst bir araştırma laboratuvarı. Buradaki her şey ücretsiz ve açık kaynaktır.",
+ "lead": "Eğitimim programcılık; uzun yıllardır elektronik mühendisi olarak çalışıyorum. Kendi ev sunucularımda çalışan araçlar yapıyorum: Telegram botları, izleme panelleri, KDE Plasma bileşenleri ve kripto işlem fikirleri için dürüst bir araştırma laboratuvarı. Buradaki her şey ücretsiz ve açık kaynaktır.",
  "projects": "Projeler", "open": "Aç", "download": "İndir", "source": "Kaynak kod",
  "crl": "Her işlem fikri test edilmeden önce yazılıp kilitlenir, ardından yeni verilerle otomatik olarak yeniden test edilir. Canlı panel, sade dille piyasa teşhisi, haftalık özet ve 7 dilde yeni başlayanlar kursu. Olumsuz sonuçlar da yayımlanır.",
  "tbm": "Bir Telegram botunu doğrudan tarayıcıda yönetin: webhook ayarlayın, kontrol edin ve silin; komutları, adı, açıklamayı, avatarı, menü düğmesini ve yönetici haklarını düzenleyin. Kod yok, kurulum yok, sunucu yok.",
@@ -105,7 +105,7 @@ T = {
 "vi": {
  "title": "Max (f1devbin): công cụ mã nguồn mở và nghiên cứu crypto trung thực",
  "desc": "Các dự án của Max (f1devbin): Crypto Research Labs, phòng thí nghiệm mở kiểm tra trung thực các ý tưởng giao dịch crypto; Telegram Bot Manager, công cụ miễn phí cho bot Telegram trên trình duyệt; My IP & Geo, tiện ích mạng cho KDE Plasma 6.",
- "lead": "Lập trình viên tự học. Tôi làm các công cụ chạy trên máy chủ tại nhà: bot Telegram, bảng giám sát, tiện ích KDE Plasma và một phòng thí nghiệm trung thực cho các ý tưởng giao dịch crypto. Mọi thứ ở đây đều miễn phí và mã nguồn mở.",
+ "lead": "Tốt nghiệp ngành lập trình, nhiều năm làm kỹ sư điện tử. Tôi làm các công cụ chạy trên máy chủ tại nhà: bot Telegram, bảng giám sát, tiện ích KDE Plasma và một phòng thí nghiệm trung thực cho các ý tưởng giao dịch crypto. Mọi thứ ở đây đều miễn phí và mã nguồn mở.",
  "projects": "Dự án", "open": "Mở", "download": "Tải về", "source": "Mã nguồn",
  "crl": "Mỗi ý tưởng giao dịch được ghi lại và khóa trước khi kiểm tra, sau đó tự động kiểm tra lại trên dữ liệu mới. Bảng điều khiển trực tiếp, chẩn đoán thị trường bằng lời đơn giản, tóm tắt hằng tuần và khóa học cho người mới bằng 7 ngôn ngữ. Kết quả tiêu cực cũng được công bố.",
  "tbm": "Quản lý bot Telegram ngay trên trình duyệt: đặt, kiểm tra và xóa webhook, sửa lệnh, tên, mô tả, ảnh đại diện, nút menu và quyền quản trị. Không cần code, không cài đặt, không máy chủ.",
@@ -119,7 +119,7 @@ T = {
 "zh": {
  "title": "Max（f1devbin）：开源工具与诚实的加密研究",
  "desc": "Max（f1devbin）的项目：Crypto Research Labs，诚实检验加密交易想法的开放实验室；Telegram Bot Manager，在浏览器中管理 Telegram 机器人的免费工具；My IP & Geo，KDE Plasma 6 网络小部件。",
- "lead": "自学成才的开发者。我做的工具运行在自己的家庭服务器上：Telegram 机器人、监控仪表盘、KDE Plasma 小部件，以及一个诚实检验加密交易想法的研究实验室。这里的一切都免费且开源。",
+ "lead": "程序员出身，多年从事电子工程师工作。我做的工具运行在自己的家庭服务器上：Telegram 机器人、监控仪表盘、KDE Plasma 小部件，以及一个诚实检验加密交易想法的研究实验室。这里的一切都免费且开源。",
  "projects": "项目", "open": "打开", "download": "下载", "source": "源代码",
  "crl": "每个交易想法都在检验前写下并锁定，之后用新数据自动复检。实时仪表盘、通俗的市场诊断、每周摘要和 7 种语言的新手课程。负面结果同样公开。",
  "tbm": "直接在浏览器中管理 Telegram 机器人：设置、检查和删除 webhook，编辑命令、名称、描述、头像、菜单按钮和管理员权限。无需代码、无需安装、无需服务器。",
