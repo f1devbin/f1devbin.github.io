@@ -227,7 +227,11 @@ def page(lang: str) -> str:
                   "url": p["live"], "description": T[lang][p["id"]],
                   **({"applicationCategory": "DeveloperApplication", "operatingSystem":
                       "Web browser" if p["id"] == "tbm" else "Linux (KDE Plasma 6)",
-                      "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD"}} if p["id"] != "crl" else {})}}
+                      "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD"}} if p["id"] != "crl" else
+                     # Google's Dataset rich results want creator and license
+                     {"creator": {"@type": "Person", "name": "Max", "alternateName": "f1devbin", "url": BASE},
+                      "license": "https://opensource.org/licenses/MIT", "isAccessibleForFree": True,
+                      "sameAs": p["repo"]})}}
               for i, p in enumerate(PROJECTS, 1)]}]
     return f"""<!doctype html>
 <html lang="{LANGS[lang][1]}">
