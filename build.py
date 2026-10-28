@@ -48,10 +48,8 @@ T = {
  "intro": [
   "I trained as a programmer and have worked as an electronics engineer for many years. Most of the software "
   "I write is for myself, for problems I actually run into.",
-  "Nearly all of it runs at home on two small servers: a Banana Pi with 1\u00a0GB of RAM and an Intel NUC that "
-  "doubles as a TV box. They run my Telegram bots, monitoring, a Home Assistant smart home and a Meshtastic "
-  "radio node. When a tool turns out to be useful to other people too, I tidy it up, write tests and "
-  "documentation and publish it here.",
+  "When a tool turns out to be useful to other people too, I tidy it up, write tests and documentation and "
+  "publish it.",
   "Oh, and I love cats. This one in the penguin costume lives in the icon of my KDE widget."],
  "cat_alt": "A cartoon cat in a penguin costume pointing at the greeting",
  "projects_h": "My projects", "source": "Source code",
@@ -100,12 +98,11 @@ T = {
   "All the code is open under the MIT license. I keep the documentation up to date and answer questions and "
   "bug reports."],
  "stack_h": "What I work with",
- "stack": ["Languages", "Databases", "Servers and CI", "Hardware and smart home"],
+ "stack": ["Languages", "Databases", "Servers and CI"],
  "contact_h": "Get in touch",
- "contact": "The easiest way is to open an issue or a discussion on GitHub, in the repository of the project you "
-            "have in mind. Russian is my native language and English is fine too. You can also write in your own "
-            "language; I’ll use a translator.",
- "contact_cta": "My GitHub profile",
+ "contact": "Questions, bug reports and ideas are welcome in the issues of the project: [Crypto Research "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Russian is my native "
+            "language and English is fine too. You can also write in your own language; I’ll use a translator.",
  "foot_privacy": "This page uses no cookies or analytics and loads nothing from other sites.",
  "foot_src": "Page source",
  "nf_title": "Page not found", "nf_text": "There’s no such page here. It may have moved.",
@@ -121,10 +118,8 @@ T = {
  "intro": [
   "По образованию я программист, а уже много лет работаю инженером-электроником. Программы пишу в основном "
   "для себя, под задачи, которые у меня действительно возникают.",
-  "Почти всё это работает у меня дома на двух маленьких серверах: Banana Pi с гигабайтом памяти и Intel NUC, "
-  "который заодно служит телеприставкой. На них крутятся мои Telegram-боты, мониторинг, умный дом на Home "
-  "Assistant и радиоузел Meshtastic. Когда инструмент оказывается полезен не только мне, я привожу его "
-  "в порядок, пишу тесты и документацию и выкладываю сюда.",
+  "Когда инструмент оказывается полезен не только мне, я привожу его в порядок, пишу тесты и документацию "
+  "и выкладываю в открытый доступ.",
   "А ещё я люблю котиков. Вот этот, в костюме пингвина, живёт в иконке моего виджета для KDE."],
  "cat_alt": "Нарисованный кот в костюме пингвина показывает лапой на приветствие",
  "projects_h": "Мои проекты", "source": "Исходный код",
@@ -176,11 +171,10 @@ T = {
   "Весь код открыт под лицензией MIT. Документацию я держу в актуальном состоянии, на вопросы и сообщения "
   "об ошибках отвечаю."],
  "stack_h": "С чем я работаю",
- "stack": ["Языки", "Базы данных", "Серверы и CI", "Железо и умный дом"],
+ "stack": ["Языки", "Базы данных", "Серверы и CI"],
  "contact_h": "Как со мной связаться",
- "contact": "Проще всего открыть issue или обсуждение на GitHub, в репозитории нужного проекта. Отвечаю "
-            "по-русски и по-английски.",
- "contact_cta": "Мой профиль на GitHub",
+ "contact": "Вопросы, ошибки и идеи пишите в issues нужного проекта: [Crypto Research Labs](crl_issues), "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Отвечаю по-русски и по-английски.",
  "foot_privacy": "Эта страница не использует cookies и аналитику и ничего не загружает с других сайтов.",
  "foot_src": "Исходный код страницы",
  "nf_title": "Страница не найдена", "nf_text": "Такой страницы здесь нет. Возможно, она переехала.",
@@ -196,10 +190,8 @@ T = {
  "intro": [
   "Estudié programación y llevo muchos años trabajando como ingeniero electrónico. La mayor parte del software "
   "que escribo es para mí, para problemas con los que de verdad me encuentro.",
-  "Casi todo funciona en casa, en dos servidores pequeños: una Banana Pi con 1\u00a0GB de RAM y un Intel NUC que "
-  "además hace de reproductor multimedia para la tele. Ahí corren mis bots de Telegram, la monitorización, una "
-  "casa inteligente con Home Assistant y un nodo de radio Meshtastic. Cuando una herramienta resulta útil "
-  "también para otras personas, la pulo, le escribo tests y documentación y la publico aquí.",
+  "Cuando una herramienta resulta útil también para otras personas, la pulo, le escribo tests y documentación y "
+  "la publico.",
   "Ah, y me encantan los gatos. Este, disfrazado de pingüino, vive en el icono de mi widget para KDE."],
  "cat_alt": "Un gato de dibujos animados disfrazado de pingüino señala el saludo",
  "projects_h": "Mis proyectos", "source": "Código fuente",
@@ -254,12 +246,11 @@ T = {
   "Todo el código es abierto, con licencia MIT. Mantengo la documentación al día y respondo a preguntas "
   "e informes de errores."],
  "stack_h": "Con qué trabajo",
- "stack": ["Lenguajes", "Bases de datos", "Servidores y CI", "Hardware y domótica"],
+ "stack": ["Lenguajes", "Bases de datos", "Servidores y CI"],
  "contact_h": "Contacto",
- "contact": "Lo más fácil es GitHub: abre un issue o una discusión en el repositorio del proyecto que te interese. "
-            "Mi lengua materna es el ruso y el inglés también me va bien, pero puedes escribirme en español: "
-            "usaré un traductor.",
- "contact_cta": "Mi perfil de GitHub",
+ "contact": "Las preguntas, los errores y las ideas van a los issues de cada proyecto: [Crypto Research "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Mi lengua materna es "
+            "el ruso y el inglés también me va bien, pero puedes escribirme en español: usaré un traductor.",
  "foot_privacy": "Esta página no usa cookies ni analítica y no carga nada de otros sitios.",
  "foot_src": "Código fuente de la página",
  "nf_title": "Página no encontrada",
@@ -276,10 +267,8 @@ T = {
  "intro": [
   "Sou formado em programação e trabalho há muitos anos como engenheiro eletrônico. A maior parte do software "
   "que escrevo é para mim mesmo, para problemas que eu realmente enfrento.",
-  "Quase tudo roda em casa, em dois servidores pequenos: um Banana Pi com 1\u00a0GB de RAM e um Intel NUC que "
-  "também faz as vezes de central multimídia da TV. Neles rodam meus bots do Telegram, o monitoramento, uma "
-  "casa inteligente com Home Assistant e um nó de rádio Meshtastic. Quando uma ferramenta se mostra útil para "
-  "outras pessoas também, eu dou um acabamento, escrevo testes e documentação e publico aqui.",
+  "Quando uma ferramenta se mostra útil para outras pessoas também, eu dou um acabamento, escrevo testes e "
+  "documentação e publico.",
   "Ah, e eu adoro gatos. Este aqui, fantasiado de pinguim, mora no ícone do meu widget para KDE."],
  "cat_alt": "Um gato de desenho animado fantasiado de pinguim apontando para a saudação",
  "projects_h": "Meus projetos", "source": "Código-fonte",
@@ -330,12 +319,11 @@ T = {
   "Todo o código é aberto, sob a licença MIT. Mantenho a documentação atualizada e respondo a dúvidas e relatos "
   "de bugs."],
  "stack_h": "Com o que eu trabalho",
- "stack": ["Linguagens", "Bancos de dados", "Servidores e CI", "Hardware e casa inteligente"],
+ "stack": ["Linguagens", "Bancos de dados", "Servidores e CI"],
  "contact_h": "Contato",
- "contact": "O jeito mais fácil é pelo GitHub: abra uma issue ou uma discussão no repositório do projeto que você "
-            "tem em mente. Minha língua materna é o russo, e inglês também serve, mas pode escrever em português: "
-            "eu uso um tradutor.",
- "contact_cta": "Meu perfil no GitHub",
+ "contact": "Dúvidas, bugs e ideias vão para as issues de cada projeto: [Crypto Research Labs](crl_issues), "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Minha língua materna é o russo, e inglês "
+            "também serve, mas pode escrever em português: eu uso um tradutor.",
  "foot_privacy": "Esta página não usa cookies nem analytics e não carrega nada de outros sites.",
  "foot_src": "Código-fonte da página",
  "nf_title": "Página não encontrada",
@@ -352,10 +340,8 @@ T = {
  "intro": [
   "Programcılık eğitimi aldım ve uzun yıllardır elektronik mühendisi olarak çalışıyorum. Yazdığım yazılımların "
   "çoğu kendim için; gerçekten karşılaştığım sorunlara çözüm olarak doğuyor.",
-  "Neredeyse hepsi evimdeki iki küçük sunucuda çalışıyor: 1\u00a0GB RAM'li bir Banana Pi ve televizyon kutusu "
-  "olarak da kullandığım bir Intel NUC. Telegram botlarım, izleme sistemim, Home Assistant ile kurduğum akıllı "
-  "ev ve bir Meshtastic telsiz düğümü bunlara emanet. Bir araç başkalarının da işine yarayacak gibi olursa onu "
-  "toparlıyor, testlerini ve belgelerini yazıp burada yayımlıyorum.",
+  "Bir araç başkalarının da işine yarayacak gibi olursa onu toparlıyor, testlerini ve belgelerini yazıp "
+  "yayımlıyorum.",
   "Bir de kedileri çok severim. Penguen kostümlü bu kedi, KDE bileşenimin simgesinde yaşıyor."],
  "cat_alt": "Penguen kostümlü, selamlamayı gösteren çizgi film kedisi",
  "projects_h": "Projelerim", "source": "Kaynak kod",
@@ -405,11 +391,11 @@ T = {
   "sitelerden hiçbir şey yüklemiyor, kaynak kodu da bunu gösteriyor.",
   "Kodun tamamı MIT lisansıyla açık. Belgeleri güncel tutuyor, sorulara ve hata bildirimlerine yanıt veriyorum."],
  "stack_h": "Neyle çalışıyorum",
- "stack": ["Diller", "Veritabanları", "Sunucular ve CI", "Donanım ve akıllı ev"],
+ "stack": ["Diller", "Veritabanları", "Sunucular ve CI"],
  "contact_h": "İletişim",
- "contact": "En kolay yol GitHub: ilgilendiğiniz projenin deposunda bir issue ya da tartışma açın. Ana dilim "
-            "Rusça, İngilizce de olur; Türkçe de yazabilirsiniz, çeviri aracı kullanırım.",
- "contact_cta": "GitHub profilim",
+ "contact": "Sorular, hata bildirimleri ve fikirler için ilgili projenin issue bölümünü kullanın: [Crypto Research "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Ana dilim Rusça, "
+            "İngilizce de olur; Türkçe de yazabilirsiniz, çeviri aracı kullanırım.",
  "foot_privacy": "Bu sayfa çerez ya da analitik kullanmaz ve başka sitelerden hiçbir şey yüklemez.",
  "foot_src": "Sayfanın kaynak kodu",
  "nf_title": "Sayfa bulunamadı", "nf_text": "Burada böyle bir sayfa yok. Taşınmış olabilir.",
@@ -425,10 +411,8 @@ T = {
  "intro": [
   "Tôi học ngành lập trình và đã làm kỹ sư điện tử nhiều năm. Phần lớn phần mềm tôi viết là cho chính mình, để "
   "giải quyết những vấn đề tôi thật sự gặp phải.",
-  "Gần như tất cả đều chạy ở nhà tôi, trên hai máy chủ nhỏ: một chiếc Banana Pi với 1\u00a0GB RAM và một chiếc "
-  "Intel NUC kiêm luôn đầu phát cho TV. Trên đó có các bot Telegram của tôi, hệ thống giám sát, nhà thông minh "
-  "dùng Home Assistant và một nút vô tuyến Meshtastic. Khi một công cụ hóa ra cũng có ích cho người khác, tôi "
-  "chỉn chu lại nó, viết kiểm thử và tài liệu rồi đăng lên đây.",
+  "Khi một công cụ hóa ra cũng có ích cho người khác, tôi chỉn chu lại nó, viết kiểm thử và tài liệu rồi công "
+  "khai.",
   "À, tôi còn rất mê mèo. Chú mèo mặc đồ chim cánh cụt này sống trong biểu tượng của tiện ích KDE mà tôi làm."],
  "cat_alt": "Chú mèo hoạt hình mặc đồ chim cánh cụt đang chỉ vào lời chào",
  "projects_h": "Dự án của tôi", "source": "Mã nguồn",
@@ -478,12 +462,11 @@ T = {
   "cũng không tải gì từ trang web khác, và mã nguồn của nó cho thấy điều đó.",
   "Toàn bộ mã nguồn mở theo giấy phép MIT. Tôi luôn cập nhật tài liệu và trả lời câu hỏi cũng như báo lỗi."],
  "stack_h": "Công cụ tôi dùng",
- "stack": ["Ngôn ngữ", "Cơ sở dữ liệu", "Máy chủ và CI", "Phần cứng và nhà thông minh"],
+ "stack": ["Ngôn ngữ", "Cơ sở dữ liệu", "Máy chủ và CI"],
  "contact_h": "Liên hệ",
- "contact": "Cách dễ nhất là qua GitHub: mở một issue hoặc một thảo luận trong kho mã của dự án bạn quan tâm. Tiếng "
-            "mẹ đẻ của tôi là tiếng Nga, tiếng Anh cũng được, và bạn cứ viết bằng tiếng Việt, tôi sẽ dùng công "
-            "cụ dịch.",
- "contact_cta": "Hồ sơ GitHub của tôi",
+ "contact": "Câu hỏi, báo lỗi và ý tưởng xin gửi vào mục issues của từng dự án: [Crypto Research Labs](crl_issues), "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Tiếng mẹ đẻ của tôi là tiếng Nga, tiếng "
+            "Anh cũng được, và bạn cứ viết bằng tiếng Việt, tôi sẽ dùng công cụ dịch.",
  "foot_privacy": "Trang này không dùng cookie hay công cụ phân tích và không tải gì từ trang web khác.",
  "foot_src": "Mã nguồn của trang",
  "nf_title": "Không tìm thấy trang", "nf_text": "Ở đây không có trang này. Có thể nó đã được chuyển đi.",
@@ -498,9 +481,7 @@ T = {
  "h1": "你好，我是 Max",
  "intro": [
   "我学的是编程，做电子工程师已经很多年了。我写的软件大多是给自己用的，为了解决自己真正遇到的问题。",
-  "它们几乎都跑在我家里的两台小服务器上：一台只有 1\u00a0GB 内存的 Banana Pi，还有一台兼作电视盒子的 Intel NUC。"
-  "上面运行着我的 Telegram 机器人、监控、基于 Home Assistant 的智能家居，还有一个 Meshtastic 无线电节点。"
-  "如果某个工具对别人也有用，我就把它整理好，写上测试和文档，发布在这里。",
+  "如果某个工具对别人也有用，我就把它整理好，写上测试和文档，公开发布。",
   "对了，我很喜欢猫。这只穿企鹅服的猫，就住在我那个 KDE 小部件的图标里。"],
  "cat_alt": "一只穿着企鹅服的卡通猫，正用爪子指向问候语",
  "projects_h": "我的项目", "source": "源代码",
@@ -542,18 +523,17 @@ T = {
   "看源代码就知道。",
   "所有代码都以 MIT 许可证开源。我会及时更新文档，也会回复提问和错误报告。"],
  "stack_h": "我用的技术",
- "stack": ["语言", "数据库", "服务器与 CI", "硬件与智能家居"],
+ "stack": ["语言", "数据库", "服务器与 CI"],
  "contact_h": "联系我",
- "contact": "最方便的方式是 GitHub：在你感兴趣的项目仓库里开一个 issue 或讨论。我的母语是俄语，英语也可以；"
+ "contact": "问题、错误报告和想法，请提交到对应项目的 issues：[Crypto Research Labs](crl_issues)、"
+            "[Telegram Bot Manager](tbm_issues)、[My IP & Geo](myip_issues)。我的母语是俄语，英语也可以；"
             "用中文写也没问题，我会用翻译工具。",
- "contact_cta": "我的 GitHub 主页",
  "foot_privacy": "本页面不使用 cookie 和统计分析，也不从其他网站加载任何内容。",
  "foot_src": "本页面的源代码",
  "nf_title": "页面不存在", "nf_text": "这里没有这个页面，它可能已经搬走了。", "home": "返回首页", "me": "Max"},
 }
 
-STACK = ["PHP\u00a08, Python, JavaScript, QML", "MariaDB, SQLite", "Ubuntu, Armbian, Nginx, systemd, GitHub Actions",
-         "Banana Pi, Intel NUC, Home Assistant, Meshtastic (LoRa)"]
+STACK = ["PHP\u00a08, Python, JavaScript, QML", "MariaDB, SQLite", "Ubuntu, Armbian, Nginx, systemd, GitHub Actions"]
 
 # fontsource subsets of IBM Plex Sans; the browser downloads only the ones a page uses
 FONT_RANGES = {
@@ -688,6 +668,8 @@ def links(lang: str) -> dict:
                         else f"{GH}/telegram-bot-manager#privacy-and-security"),
         "myip_live": f"{GH}/my-ip-geo-plasma6/releases/latest", "myip_repo": f"{GH}/my-ip-geo-plasma6",
         "myip_privacy": f"{GH}/my-ip-geo-plasma6#network-access-and-privacy",
+        "crl_issues": f"{GH}/Crypto-Research-Labs/issues", "tbm_issues": f"{GH}/telegram-bot-manager/issues",
+        "myip_issues": f"{GH}/my-ip-geo-plasma6/issues",
         "gh": GH, "src": f"{GH}/f1devbin.github.io",
     }
 
@@ -864,12 +846,12 @@ def page(lang: str, css_ver: str, today: str) -> str:
 <h2 id="contact">{t(s["contact_h"])}</h2>
 <div class="prose">
 <p>{r(s["contact"])}</p>
-<p class="actions"><a class="btn primary" href="{GH}">{e(s["contact_cta"])}</a></p>
 </div>
 </section>
 </main>
 <footer><div class="wrap">
 <p>{t(s["foot_privacy"])}</p>
+<p><a href="{GH}">github.com/f1devbin</a></p>
 <p><a href="{L["src"]}">{e(s["foot_src"])}</a></p>
 <p>© {YEAR} {e(s["me"])} (f1devbin)</p>
 </div></footer>
