@@ -1,0 +1,82 @@
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-cyrillic-700-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-vietnamese-400-normal.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-vietnamese-600-normal.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-vietnamese-700-normal.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+:root{--bg:#0f1b2d;--rule:#33496b;--text:#fff;--text2:#dce6f3;--link:#8fd0ff;--accent:#ffb547;--btn:#8fd0ff;
+--btn-text:#0b1626;--shadow:rgba(0,0,0,.5);color-scheme:dark}
+@media (prefers-color-scheme:light){:root{--bg:#f7f9fc;--rule:#bccadb;--text:#0a1424;--text2:#1d2d43;
+--link:#084a8e;--accent:#9a4a00;--btn:#084a8e;--btn-text:#fff;--shadow:rgba(16,32,64,.32);color-scheme:light}}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:112.5%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text2);
+font:400 1rem/1.65 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+html[lang="zh-Hans"] body{font-family:"IBM Plex Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",
+"Noto Sans CJK SC","Source Han Sans SC",sans-serif;line-height:1.75}
+html[lang="zh-Hans"] h1{word-break:keep-all}
+h1,h2,h3{color:var(--text);font-weight:700;text-wrap:balance}
+p{text-wrap:pretty}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-100vw;top:.5rem}
+.skip:focus{left:1rem;z-index:2;background:var(--bg);color:var(--text);padding:.5rem 1rem}
+.top{border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 1.5rem;
+padding-top:.5rem;padding-bottom:.5rem}
+.brand{padding:.4rem 0;font-size:1.05rem;font-weight:700;color:var(--text);text-decoration:none}
+.brand:hover{text-decoration:underline}
+.langs{display:flex;flex-wrap:wrap;gap:0 1rem;margin:0;padding:0;list-style:none;font-size:.9rem}
+.langs a{display:inline-block;padding:.4rem 0;color:var(--text2);text-decoration:none}
+.langs a:hover{text-decoration:underline}
+.langs a[aria-current]{color:var(--text);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;
+text-underline-offset:.35em}
+.hero{padding:3rem 0 0}
+.hello{display:flex;align-items:center;gap:1.75rem;margin:0 0 2rem}
+.cat{flex:none;width:12rem;height:auto;transform:rotate(-4deg);filter:drop-shadow(0 .5rem .7rem var(--shadow))}
+h1{margin:2.4rem 0 0;font-size:3.6rem;line-height:1.05;letter-spacing:-.025em}
+.intro,.prose{max-width:40rem}
+.intro p,.prose p{margin:0 0 1.1rem}
+.intro .lead{font-size:1.25rem;line-height:1.55;color:var(--text)}
+h2{margin:4.25rem 0 1.25rem;font-size:1.85rem;line-height:1.2;letter-spacing:-.015em}
+.project{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:1.25rem 2.75rem;padding:2.25rem 0}
+.project:first-child{padding-top:.5rem}
+.project+.project{border-top:1px solid var(--rule)}
+.project h3{margin:0 0 .6rem;font-size:1.5rem;line-height:1.25;letter-spacing:-.01em}
+.project p{margin:0 0 1rem}
+.project .what{font-size:1.1rem;color:var(--text)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;min-height:2.75rem;padding:.45rem 1.1rem;border:2px solid var(--btn);
+border-radius:.5rem;color:var(--text);font-weight:600;text-decoration:none}
+.btn:hover{text-decoration:underline;text-decoration-thickness:2px}
+.btn.primary{background:var(--btn);color:var(--btn-text)}
+.shot{margin:0}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:.5rem}
+.shot.tall img{width:auto;max-width:100%;max-height:26rem}
+.shot figcaption{margin-top:.6rem;font-size:.875rem;line-height:1.5}
+.stack{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.55rem 2.25rem;max-width:46rem;margin:0}
+.stack dt{font-weight:600;color:var(--text)}
+.stack dd{margin:0}
+footer{margin-top:5rem;border-top:1px solid var(--rule);padding:1.75rem 0 3rem;font-size:.9rem}
+footer p{margin:0 0 .4rem}
+@media (max-width:760px){
+html{font-size:106.25%}
+.hero{padding-top:2rem}
+.hello{gap:1.1rem;margin-bottom:1.5rem}
+.cat{width:7.25rem}
+h1{margin-top:1.3rem;font-size:2.3rem}
+.intro .lead{font-size:1.15rem}
+h2{margin-top:3.25rem;font-size:1.55rem}
+.project{grid-template-columns:minmax(0,1fr);padding:1.75rem 0}
+.stack{grid-template-columns:minmax(0,1fr);gap:0}
+.stack dd{margin-bottom:.8rem}
+}
+@media (max-width:380px){.cat{width:6.25rem}h1{font-size:2rem}}
