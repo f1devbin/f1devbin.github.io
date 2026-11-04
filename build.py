@@ -15,7 +15,7 @@ import hashlib
 import html
 import json
 import re
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -719,7 +719,7 @@ def head(lang: str, title: str, desc: str, up: str, css_ver: str, canonical: str
     return "\n".join(parts) + "\n" + extra
 
 
-def page(lang: str, css_ver: str, today: str) -> str:
+def page(lang: str, css_ver: str, now: str) -> str:
     s, L = T[lang], links(lang)
     up = "" if lang == "en" else "../"
     hl = LANGS[lang][1]
@@ -736,7 +736,7 @@ def page(lang: str, css_ver: str, today: str) -> str:
                          "Backtesting"], "sameAs": [GH]}
     who = {"@id": BASE + "#max"}
     ld = [{"@context": "https://schema.org", "@type": "ProfilePage", "url": url(lang), "name": s["title"],
-           "inLanguage": hl, "dateModified": today, "mainEntity": me},
+           "inLanguage": hl, "dateModified": now, "mainEntity": me},
           {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "item": {
                   # Google's Dataset rich results want creator and license
@@ -900,11 +900,13 @@ def main() -> None:
     (ROOT / "assets").mkdir(exist_ok=True)
     (ROOT / "assets/site.css").write_text(css, encoding="utf-8")
     ver = hashlib.sha256(css.encode()).hexdigest()[:8]
-    today = date.today().isoformat()
+    stamp = datetime.now(timezone.utc).replace(microsecond=0)
+    today = stamp.date().isoformat()
+    now = stamp.isoformat()  # Google wants a full date-time with a time zone in dateModified
     for lang in LANGS:
         out = ROOT / ("index.html" if lang == "en" else f"{lang}/index.html")
         out.parent.mkdir(exist_ok=True)
-        out.write_text(page(lang, ver, today), encoding="utf-8")
+        out.write_text(page(lang, ver, now), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(sitemap(today), encoding="utf-8")
     (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\n\n" + "".join(
         f"Sitemap: {BASE}{p}\n" for p in ["sitemap.xml"] + PROJECT_SITEMAPS), encoding="utf-8")
