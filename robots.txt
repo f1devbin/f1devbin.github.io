@@ -4,3 +4,4 @@ Allow: /
 Sitemap: https://f1devbin.github.io/sitemap.xml
 Sitemap: https://f1devbin.github.io/Crypto-Research-Labs/sitemap.xml
 Sitemap: https://f1devbin.github.io/telegram-bot-manager/sitemap.xml
+Sitemap: https://f1devbin.github.io/c6-zigbee-stick/sitemap.xml

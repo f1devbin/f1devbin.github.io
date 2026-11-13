@@ -25,7 +25,7 @@ YEAR = 2026
 LANGS = {"en": ("English", "en", "en_US"), "ru": ("Русский", "ru", "ru_RU"), "es": ("Español", "es", "es_ES"),
          "pt": ("Português", "pt-BR", "pt_BR"), "tr": ("Türkçe", "tr", "tr_TR"), "vi": ("Tiếng Việt", "vi", "vi_VN"),
          "zh": ("中文", "zh-Hans", "zh_CN")}
-PROJECT_SITEMAPS = ["Crypto-Research-Labs/sitemap.xml", "telegram-bot-manager/sitemap.xml"]
+PROJECT_SITEMAPS = ["Crypto-Research-Labs/sitemap.xml", "telegram-bot-manager/sitemap.xml", "c6-zigbee-stick/sitemap.xml"]
 TBM_LANGS = ("ru", "es", "pt", "zh")  # Telegram Bot Manager has these besides English
 # connect-src only lets audit tools (Lighthouse) read robots.txt; the page itself has no scripts
 CSP = ("default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self'; "
