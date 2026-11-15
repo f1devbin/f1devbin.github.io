@@ -4,7 +4,8 @@
     python3 tools/images.py --icon ../my-ip-geo-plasma6/package/contents/icon.png \
         --crl ../Crypto-Research-Labs/docs/screenshots/dashboard.png \
         --tbm ../telegram-bot-manager/docs/screenshots/webhook.png \
-        --myip ../my-ip-geo-plasma6/screenshots/main.png
+        --myip ../my-ip-geo-plasma6/screenshots/main.png \
+        --c6 c6-flasher.png --gbc ../GrodnoBikeClub/mockup.png
 
 Needs Pillow, numpy, scipy, fonttools and brotli. Writes assets/cat.webp (the widget's cat as a die-cut sticker, the
 "IP & Geo" lettering left out; the drawing itself is not changed), the project screenshots,
@@ -165,38 +166,59 @@ def shot(src: Path, box, name: str, widths):
     return im.size
 
 
+def tall(src: Path, name: str, width: int = 416):
+    """A portrait screenshot, shown narrow next to the text."""
+    im = Image.open(src).convert("RGB")
+    if im.width > width:
+        im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+    im.save(ASSETS / f"{name}.webp", "WEBP", quality=88, method=6)
+    return im.size
+
+
 def main():
+    """Every source is optional: only the images given are rebuilt, the rest stay as they are."""
     ap = argparse.ArgumentParser()
-    ap.add_argument("--icon", type=Path, required=True)
-    ap.add_argument("--crl", type=Path, required=True)
-    ap.add_argument("--tbm", type=Path, required=True)
-    ap.add_argument("--myip", type=Path, required=True)
+    ap.add_argument("--icon", type=Path)
+    ap.add_argument("--crl", type=Path)
+    ap.add_argument("--tbm", type=Path)
+    ap.add_argument("--myip", type=Path)
+    ap.add_argument("--c6", type=Path, help="screenshot of the C6 Zigbee Stick flasher page, 1280 px wide")
+    ap.add_argument("--gbc", type=Path, help="GrodnoBikeClub mockup.png")
     a = ap.parse_args()
     (ASSETS / "og").mkdir(parents=True, exist_ok=True)
+    sizes_file = ASSETS / "sizes.json"
+    sizes = json.loads(sizes_file.read_text()) if sizes_file.exists() else {}
 
-    cat = sticker(a.icon)
-    cat.save(ASSETS / "cat.webp", "WEBP", quality=88, method=6)
-    cat.resize((240, round(cat.height * 240 / cat.width)), Image.LANCZOS).save(ASSETS / "cat-240.webp", "WEBP",
-                                                                             quality=88, method=6)
-    sizes = {"cat": cat.size}
-    sizes["crl"] = shot(a.crl, (0, 0, 1280, 600), "crl", (640, 960, 1280))
-    sizes["tbm"] = shot(a.tbm, (0, 0, 1280, 640), "tbm", (640, 960, 1280))
-    myip = Image.open(a.myip)
-    myip.save(ASSETS / "myip.webp", "WEBP", quality=88, method=6)
-    sizes["myip"] = myip.size
-    (ASSETS / "sizes.json").write_text(json.dumps({k: list(v) for k, v in sizes.items()}) + "\n")
+    if a.crl:
+        sizes["crl"] = shot(a.crl, (0, 0, 1280, 600), "crl", (640, 960, 1280))
+    if a.tbm:
+        sizes["tbm"] = shot(a.tbm, (0, 0, 1280, 640), "tbm", (640, 960, 1280))
+    if a.c6:
+        sizes["c6"] = shot(a.c6, (0, 0, 1280, 600), "c6", (640, 960, 1280))
+    if a.myip:
+        myip = Image.open(a.myip)
+        myip.save(ASSETS / "myip.webp", "WEBP", quality=88, method=6)
+        sizes["myip"] = myip.size
+    if a.gbc:
+        sizes["gbc"] = tall(a.gbc, "gbc")
+
+    if a.icon:
+        cat = sticker(a.icon)
+        cat.save(ASSETS / "cat.webp", "WEBP", quality=88, method=6)
+        cat.resize((240, round(cat.height * 240 / cat.width)), Image.LANCZOS).save(ASSETS / "cat-240.webp", "WEBP",
+                                                                                 quality=88, method=6)
+        sizes["cat"] = cat.size
+        for lang in build.LANGS:
+            og_card(lang, cat).save(ASSETS / "og" / f"{lang}.png", optimize=True)
+        # favicons: the head (hood and face) of the sticker, a 245 px square at the top
+        head = cat.crop((95, 0, 340, 245))
+        head.resize((48, 48), Image.LANCZOS).save(ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+        touch = Image.new("RGBA", (180, 180), NAVY + (255,))
+        touch.alpha_composite(head.resize((150, 150), Image.LANCZOS), (15, 18))
+        touch.convert("RGB").save(ROOT / "apple-touch-icon.png", optimize=True)
+
+    sizes_file.write_text(json.dumps({k: list(v) for k, v in sizes.items()}) + "\n")
     print(sizes)
-
-    for lang in build.LANGS:
-        og_card(lang, cat).save(ASSETS / "og" / f"{lang}.png", optimize=True)
-
-    # favicons: the head (hood and face) of the sticker, a 245 px square at the top
-    head = cat.crop((95, 0, 340, 245))
-    head.resize((48, 48), Image.LANCZOS).save(ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
-    touch = Image.new("RGBA", (180, 180), NAVY + (255,))
-    touch.alpha_composite(head.resize((150, 150), Image.LANCZOS), (15, 18))
-    touch.convert("RGB").save(ROOT / "apple-touch-icon.png", optimize=True)
-    print("done")
 
 
 if __name__ == "__main__":
