@@ -25,7 +25,9 @@ YEAR = 2026
 LANGS = {"en": ("English", "en", "en_US"), "ru": ("Русский", "ru", "ru_RU"), "es": ("Español", "es", "es_ES"),
          "pt": ("Português", "pt-BR", "pt_BR"), "tr": ("Türkçe", "tr", "tr_TR"), "vi": ("Tiếng Việt", "vi", "vi_VN"),
          "zh": ("中文", "zh-Hans", "zh_CN")}
-PROJECT_SITEMAPS = ["Crypto-Research-Labs/sitemap.xml", "telegram-bot-manager/sitemap.xml", "c6-zigbee-stick/sitemap.xml"]
+PROJECT_SITEMAPS = ["Crypto-Research-Labs/sitemap.xml", "telegram-bot-manager/sitemap.xml", "c6-zigbee-stick/sitemap.xml",
+                    "GrodnoBikeClub/sitemap.xml"]
+TALL = {"myip", "gbc"}  # portrait screenshots, shown narrower
 TBM_LANGS = ("ru", "es", "pt", "zh")  # Telegram Bot Manager has these besides English
 # connect-src only lets audit tools (Lighthouse) read robots.txt; the page itself has no scripts
 CSP = ("default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self'; "
@@ -40,8 +42,7 @@ CAT_SIZES = "(max-width: 380px) 106px, (max-width: 760px) 124px, 216px"  # .cat 
 T = {
 "en": {
  "title": "Max (f1devbin): programmer and electronics engineer",
- "desc": "I’m Max, a programmer and electronics engineer. Open-source projects: an honest crypto research lab, "
-         "a browser tool for Telegram bots and a KDE Plasma 6 widget.",
+ "desc": "I’m Max, a programmer and electronics engineer. Open source: a crypto research lab, Telegram tools, a KDE Plasma 6 widget and a Zigbee coordinator for Home Assistant.",
  "og_line": "Programmer and electronics engineer", "job": "Electronics engineer",
  "skip": "Skip to content", "lang_label": "Language",
  "h1": "Hi, I’m Max",
@@ -89,10 +90,22 @@ T = {
  "myip_cap": "The address in the screenshot belongs to a VPN server.",
  "myip_alt": "My IP & Geo widget: public IP, location, provider, system load and traffic",
  "myip_cta": "Download the widget",
+ "c6_what": "Turns an inexpensive ESP32-C6 board into a Zigbee coordinator for Home Assistant: flash it from the browser, plug it in, press “Add”.",
+ "c6_story": "Home Assistant recognises store-bought Zigbee sticks by their USB name, but every ESP32-C6 reports the same generic one, so a home-made coordinator meant editing configs by hand. My integration asks the board over the ZBOSS protocol whether it really is a coordinator, then installs and sets up Zigbee2MQTT on its own and restarts it if the stick is unplugged and plugged back in. The firmware is Espressif’s, flashed straight from the page; nothing to install on your computer.",
+ "c6_proof": "The [firmware page](c6_live) has a FAQ, and the README explains [how it works](c6_how).",
+ "c6_cap": "The firmware page: one button flashes the board.",
+ "c6_alt": "C6 Zigbee Stick firmware page with the Install firmware button",
+ "c6_cta": "Flash the firmware",
+ "gbc_what": "A daily Telegram digest of cycling news from Belarus and Grodno, with the weather and exchange rates.",
+ "gbc_story": "Every day at noon Minsk time a GitHub Actions job collects the news, an AI model picks the best items and rewrites them in a friendly tone, and the post goes to the channel. Politics, accidents and crime are filtered out twice: by stop words and by the model’s instructions. If the AI is unavailable, a plain digest goes out anyway, and news that was already posted never repeats. No server and no computer has to stay on, and you can run your own copy for any channel.",
+ "gbc_proof": "Every issue is also on the [website](gbc_site), with an RSS feed.",
+ "gbc_cap": "A sample post.",
+ "gbc_alt": "GrodnoBikeClub digest post in Telegram: cycling news, weather and exchange rates",
+ "gbc_cta": "Open the channel",
  "how_h": "How I work",
  "how": [
   "I don’t write anything in a README that I haven’t checked myself. In the lab the checking is part of the "
-  "method, and the other projects have automated tests that run on GitHub Actions with every change.",
+  "method, and the other projects are checked automatically on GitHub Actions.",
   "My projects don’t collect anything about you. There are no analytics, cookies or ads, and this page doesn’t "
   "load anything from other sites either; its source code shows it.",
   "All the code is open under the MIT license. I keep the documentation up to date and answer questions and "
@@ -101,7 +114,7 @@ T = {
  "stack": ["Languages", "Databases", "Servers and CI"],
  "contact_h": "Get in touch",
  "contact": "Questions, bug reports and ideas are welcome in the issues of the project: [Crypto Research "
-            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Russian is my native "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Russian is my native "
             "language and English is fine too. You can also write in your own language; I’ll use a translator.",
  "foot_privacy": "This page uses no cookies or analytics and loads nothing from other sites.",
  "foot_src": "Page source",
@@ -110,8 +123,7 @@ T = {
 
 "ru": {
  "title": "Макс (f1devbin): программист и инженер-электроник",
- "desc": "Макс, программист и инженер-электроник. Честная проверка торговых идей для криптовалют, настройка "
-         "Telegram-ботов в браузере и виджет для KDE Plasma 6.",
+ "desc": "Макс, программист и инженер-электроник. Открытые проекты: проверка торговых идей, инструменты для Telegram, виджет KDE Plasma 6, Zigbee-координатор для Home Assistant.",
  "og_line": "Программист и инженер-электроник", "job": "Инженер-электроник",
  "skip": "Перейти к содержимому", "lang_label": "Язык",
  "h1": "Привет, я Макс",
@@ -162,10 +174,22 @@ T = {
  "myip_cap": "IP-адрес на снимке принадлежит VPN-серверу.",
  "myip_alt": "Виджет My IP & Geo: внешний IP, местоположение, провайдер, загрузка системы и трафик",
  "myip_cta": "Скачать виджет",
+ "c6_what": "Превращает недорогую плату ESP32-C6 в Zigbee-координатор для Home Assistant: прошить из браузера, вставить в USB, нажать «Добавить».",
+ "c6_story": "Покупные Zigbee-стики Home Assistant узнаёт по имени USB-устройства, а все ESP32-C6 называются одинаково, поэтому самодельный координатор приходилось настраивать руками в конфигах. Моя интеграция спрашивает плату по протоколу ZBOSS, действительно ли это координатор, потом сама ставит и настраивает Zigbee2MQTT и перезапускает его, если стик вынули и вставили обратно. Прошивка от Espressif, заливается прямо со страницы, на компьютер ничего ставить не нужно.",
+ "c6_proof": "На [странице прошивки](c6_live) есть ответы на частые вопросы, а в README описано, [как всё устроено](c6_how).",
+ "c6_cap": "Страница прошивки: плата прошивается одной кнопкой.",
+ "c6_alt": "Страница прошивки C6 Zigbee Stick с кнопкой установки",
+ "c6_cta": "Прошить плату",
+ "gbc_what": "Ежедневный дайджест велоновостей Беларуси и Гродно в Telegram, с погодой и курсами валют.",
+ "gbc_story": "Каждый день в полдень по Минску задача в GitHub Actions собирает новости, ИИ-модель отбирает лучшие и переписывает их в доброжелательном тоне, а готовый пост уходит в канал. Политика, ДТП и криминал отсеиваются дважды: по стоп-словам и инструкцией для модели. Если ИИ недоступен, выходит обычный дайджест без него, а уже опубликованные новости не повторяются. Ни сервер, ни включённый компьютер не нужны, а свою копию можно запустить для любого канала.",
+ "gbc_proof": "Все выпуски есть и на [сайте](gbc_site), с RSS-лентой.",
+ "gbc_cap": "Пример поста.",
+ "gbc_alt": "Пост дайджеста GrodnoBikeClub в Telegram: велоновости, погода и курсы валют",
+ "gbc_cta": "Открыть канал",
  "how_h": "Как я работаю",
  "how": [
-  "Я не пишу в README того, что не проверил сам. В лаборатории проверка заложена в сам метод, а в остальных "
-  "проектах есть автотесты, которые запускаются на GitHub Actions при каждом изменении.",
+  "Я не пишу в README того, что не проверил сам. В лаборатории проверка заложена в сам метод, а остальные "
+  "проекты проверяются автоматически на GitHub Actions.",
   "Мои проекты ничего о вас не собирают, в них нет ни аналитики, ни cookies, ни рекламы. Эта страница тоже "
   "ничего не загружает с чужих сайтов, и это видно по её исходному коду.",
   "Весь код открыт под лицензией MIT. Документацию я держу в актуальном состоянии, на вопросы и сообщения "
@@ -174,7 +198,7 @@ T = {
  "stack": ["Языки", "Базы данных", "Серверы и CI"],
  "contact_h": "Как со мной связаться",
  "contact": "Вопросы, ошибки и идеи пишите в issues нужного проекта: [Crypto Research Labs](crl_issues), "
-            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Отвечаю по-русски и по-английски.",
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Отвечаю по-русски и по-английски.",
  "foot_privacy": "Эта страница не использует cookies и аналитику и ничего не загружает с других сайтов.",
  "foot_src": "Исходный код страницы",
  "nf_title": "Страница не найдена", "nf_text": "Такой страницы здесь нет. Возможно, она переехала.",
@@ -182,8 +206,7 @@ T = {
 
 "es": {
  "title": "Max (f1devbin): programador e ingeniero electrónico",
- "desc": "Max, programador e ingeniero electrónico. Código abierto: un laboratorio honesto de trading cripto, una web "
-         "para bots de Telegram y un widget para KDE Plasma 6.",
+ "desc": "Max, programador e ingeniero electrónico. Código abierto: laboratorio de trading cripto, herramientas de Telegram, widget de KDE Plasma 6 y coordinador Zigbee para Home Assistant.",
  "og_line": "Programador e ingeniero electrónico", "job": "Ingeniero electrónico",
  "skip": "Saltar al contenido", "lang_label": "Idioma",
  "h1": "Hola, soy Max",
@@ -237,10 +260,22 @@ T = {
  "myip_cap": "La dirección de la captura pertenece a un servidor VPN.",
  "myip_alt": "Widget My IP & Geo: IP pública, ubicación, proveedor, carga del sistema y tráfico",
  "myip_cta": "Descargar el widget",
+ "c6_what": "Convierte una placa ESP32-C6 económica en un coordinador Zigbee para Home Assistant: se flashea desde el navegador, se conecta y se pulsa «Añadir».",
+ "c6_story": "Home Assistant reconoce los adaptadores Zigbee comerciales por su nombre USB, pero todas las ESP32-C6 muestran el mismo nombre genérico, así que un coordinador casero obligaba a editar la configuración a mano. Mi integración pregunta a la placa por el protocolo ZBOSS si de verdad es un coordinador, luego instala y configura Zigbee2MQTT por su cuenta y lo reinicia si el adaptador se desconecta y se vuelve a conectar. El firmware es de Espressif y se flashea desde la propia página, sin instalar nada en el ordenador.",
+ "c6_proof": "La [página del firmware](c6_live) tiene preguntas frecuentes, y el README explica [cómo funciona](c6_how), en inglés.",
+ "c6_cap": "La página del firmware: la placa se flashea con un botón.",
+ "c6_alt": "Página del firmware de C6 Zigbee Stick con el botón de instalación",
+ "c6_cta": "Flashear el firmware",
+ "gbc_what": "Un resumen diario en Telegram de noticias de ciclismo de Bielorrusia y Grodno, con el tiempo y los tipos de cambio.",
+ "gbc_story": "Cada día a mediodía (hora de Minsk), una tarea de GitHub Actions recoge las noticias, un modelo de IA elige las mejores y las reescribe en tono amable, y la publicación llega al canal. La política, los accidentes y los sucesos se filtran dos veces: por palabras clave y por las instrucciones del modelo. Si la IA no está disponible, sale igualmente un resumen sencillo, y lo ya publicado no se repite. No hace falta servidor ni ordenador encendido, y puedes montar tu propia copia para cualquier canal.",
+ "gbc_proof": "Todos los números están también en la [web](gbc_site), con canal RSS (en ruso).",
+ "gbc_cap": "Una publicación de ejemplo.",
+ "gbc_alt": "Publicación del resumen GrodnoBikeClub en Telegram: noticias de ciclismo, tiempo y tipos de cambio",
+ "gbc_cta": "Abrir el canal",
  "how_h": "Cómo trabajo",
  "how": [
   "No escribo en un README nada que no haya comprobado yo mismo. En el laboratorio, la comprobación forma parte "
-  "del método, y los demás proyectos tienen tests automáticos que se ejecutan en GitHub Actions con cada cambio.",
+  "del método, y los demás proyectos se comprueban automáticamente en GitHub Actions.",
   "Mis proyectos no recopilan nada sobre ti: ni analítica, ni cookies, ni publicidad. Esta página tampoco carga "
   "nada de otros sitios, y su código fuente lo demuestra.",
   "Todo el código es abierto, con licencia MIT. Mantengo la documentación al día y respondo a preguntas "
@@ -249,7 +284,7 @@ T = {
  "stack": ["Lenguajes", "Bases de datos", "Servidores y CI"],
  "contact_h": "Contacto",
  "contact": "Las preguntas, los errores y las ideas van a los issues de cada proyecto: [Crypto Research "
-            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Mi lengua materna es "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Mi lengua materna es "
             "el ruso y el inglés también me va bien, pero puedes escribirme en español: usaré un traductor.",
  "foot_privacy": "Esta página no usa cookies ni analítica y no carga nada de otros sitios.",
  "foot_src": "Código fuente de la página",
@@ -259,8 +294,7 @@ T = {
 
 "pt": {
  "title": "Max (f1devbin): programador e engenheiro eletrônico",
- "desc": "Max, programador e engenheiro eletrônico. Código aberto: laboratório honesto de trading cripto, ferramenta "
-         "para bots do Telegram e widget para KDE Plasma 6.",
+ "desc": "Max, programador e engenheiro eletrônico. Código aberto: laboratório de trading cripto, ferramentas para Telegram, widget para KDE Plasma 6 e coordenador Zigbee para Home Assistant.",
  "og_line": "Programador e engenheiro eletrônico", "job": "Engenheiro eletrônico",
  "skip": "Pular para o conteúdo", "lang_label": "Idioma",
  "h1": "Oi, eu sou o Max",
@@ -310,10 +344,22 @@ T = {
  "myip_cap": "O endereço na captura pertence a um servidor VPN.",
  "myip_alt": "Widget My IP & Geo: IP público, localização, provedor, carga do sistema e tráfego",
  "myip_cta": "Baixar o widget",
+ "c6_what": "Transforma uma placa ESP32-C6 barata em um coordenador Zigbee para o Home Assistant: grave pelo navegador, conecte e toque em “Adicionar”.",
+ "c6_story": "O Home Assistant reconhece os adaptadores Zigbee comprados prontos pelo nome USB, mas toda ESP32-C6 mostra o mesmo nome genérico, então um coordenador caseiro exigia editar configurações à mão. Minha integração pergunta à placa, pelo protocolo ZBOSS, se ela é mesmo um coordenador, depois instala e configura o Zigbee2MQTT sozinha e o reinicia se o adaptador for desconectado e conectado de novo. O firmware é da Espressif e é gravado direto da página, sem instalar nada no computador.",
+ "c6_proof": "A [página do firmware](c6_live) tem perguntas frequentes, e o README explica [como funciona](c6_how), em inglês.",
+ "c6_cap": "A página do firmware: a placa é gravada com um botão.",
+ "c6_alt": "Página do firmware do C6 Zigbee Stick com o botão de instalação",
+ "c6_cta": "Gravar o firmware",
+ "gbc_what": "Um resumo diário no Telegram com notícias de ciclismo da Bielorrússia e de Grodno, além do tempo e do câmbio.",
+ "gbc_story": "Todo dia ao meio-dia (horário de Minsk), uma tarefa do GitHub Actions coleta as notícias, um modelo de IA escolhe as melhores e as reescreve em tom amigável, e o post vai para o canal. Política, acidentes e crimes são filtrados duas vezes: por palavras-chave e pelas instruções do modelo. Se a IA estiver fora do ar, sai mesmo assim um resumo simples, e o que já foi publicado não se repete. Não precisa de servidor nem de computador ligado, e dá para rodar sua própria cópia para qualquer canal.",
+ "gbc_proof": "Todas as edições também estão no [site](gbc_site), com feed RSS (em russo).",
+ "gbc_cap": "Um post de exemplo.",
+ "gbc_alt": "Post do resumo GrodnoBikeClub no Telegram: notícias de ciclismo, tempo e câmbio",
+ "gbc_cta": "Abrir o canal",
  "how_h": "Como eu trabalho",
  "how": [
   "Não escrevo num README nada que eu mesmo não tenha verificado. No laboratório, a verificação faz parte do "
-  "método, e os outros projetos têm testes automáticos que rodam no GitHub Actions a cada mudança.",
+  "método, e os outros projetos são verificados automaticamente no GitHub Actions.",
   "Meus projetos não coletam nada sobre você: nada de analytics, cookies ou anúncios. Esta página também não "
   "carrega nada de outros sites, e o código-fonte dela mostra isso.",
   "Todo o código é aberto, sob a licença MIT. Mantenho a documentação atualizada e respondo a dúvidas e relatos "
@@ -322,7 +368,7 @@ T = {
  "stack": ["Linguagens", "Bancos de dados", "Servidores e CI"],
  "contact_h": "Contato",
  "contact": "Dúvidas, bugs e ideias vão para as issues de cada projeto: [Crypto Research Labs](crl_issues), "
-            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Minha língua materna é o russo, e inglês "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Minha língua materna é o russo, e inglês "
             "também serve, mas pode escrever em português: eu uso um tradutor.",
  "foot_privacy": "Esta página não usa cookies nem analytics e não carrega nada de outros sites.",
  "foot_src": "Código-fonte da página",
@@ -332,8 +378,7 @@ T = {
 
 "tr": {
  "title": "Max (f1devbin): programcı ve elektronik mühendisi",
- "desc": "Max, programcı ve elektronik mühendisi. Açık kaynak: kripto işlem fikirleri için dürüst bir laboratuvar, "
-         "Telegram botları için web aracı ve KDE Plasma 6 bileşeni.",
+ "desc": "Max, programcı ve elektronik mühendisi. Açık kaynak: kripto araştırma laboratuvarı, Telegram araçları, KDE Plasma 6 bileşeni ve Home Assistant için Zigbee koordinatörü.",
  "og_line": "Programcı ve elektronik mühendisi", "job": "Elektronik mühendisi",
  "skip": "İçeriğe geç", "lang_label": "Dil",
  "h1": "Merhaba, ben Max",
@@ -383,10 +428,22 @@ T = {
  "myip_cap": "Ekran görüntüsündeki adres bir VPN sunucusuna ait.",
  "myip_alt": "My IP & Geo bileşeni: genel IP, konum, sağlayıcı, sistem yükü ve trafik",
  "myip_cta": "Bileşeni indir",
+ "c6_what": "Ucuz bir ESP32-C6 kartını Home Assistant için Zigbee koordinatörüne çevirir: tarayıcıdan yazılımı yükleyin, takın, “Ekle”ye basın.",
+ "c6_story": "Home Assistant hazır Zigbee çubuklarını USB adlarından tanır, ama her ESP32-C6 aynı genel adı gösterir; bu yüzden ev yapımı bir koordinatör için yapılandırmayı elle düzenlemek gerekiyordu. Entegrasyonum karta ZBOSS protokolüyle gerçekten koordinatör olup olmadığını sorar, ardından Zigbee2MQTT’yi kendisi kurup ayarlar ve çubuk çıkarılıp yeniden takılırsa onu yeniden başlatır. Yazılım Espressif’in; doğrudan sayfadan yüklenir, bilgisayara bir şey kurmak gerekmez.",
+ "c6_proof": "[Yazılım sayfasında](c6_live) sık sorulan sorular var, README de [nasıl çalıştığını](c6_how) İngilizce anlatıyor.",
+ "c6_cap": "Yazılım sayfası: kart tek düğmeyle programlanır.",
+ "c6_alt": "C6 Zigbee Stick yazılım sayfası ve yükleme düğmesi",
+ "c6_cta": "Yazılımı yükle",
+ "gbc_what": "Belarus ve Grodno’dan bisiklet haberlerini hava durumu ve döviz kurlarıyla birlikte her gün Telegram’a getiren bir özet.",
+ "gbc_story": "Her gün Minsk saatiyle öğlen bir GitHub Actions görevi haberleri toplar, bir yapay zekâ modeli en iyilerini seçip dostça bir dille yeniden yazar ve gönderi kanala gider. Siyaset, kazalar ve suç haberleri iki kez elenir: yasaklı kelimelerle ve modelin talimatlarıyla. Yapay zekâ erişilemezse yine de sade bir özet çıkar, yayımlanmış haberler tekrarlanmaz. Sunucuya ya da açık bir bilgisayara gerek yoktur; kendi kopyanızı herhangi bir kanal için çalıştırabilirsiniz.",
+ "gbc_proof": "Tüm sayılar RSS akışıyla birlikte [web sitesinde](gbc_site) de var (Rusça).",
+ "gbc_cap": "Örnek bir gönderi.",
+ "gbc_alt": "Telegram’da GrodnoBikeClub özet gönderisi: bisiklet haberleri, hava durumu ve döviz kurları",
+ "gbc_cta": "Kanalı aç",
  "how_h": "Nasıl çalışıyorum",
  "how": [
   "Kendim kontrol etmediğim hiçbir şeyi README'ye yazmam. Laboratuvarda kontrol yöntemin bir parçası; diğer "
-  "projelerde ise her değişiklikte GitHub Actions üzerinde çalışan otomatik testler var.",
+  "projeler ise GitHub Actions üzerinde otomatik olarak kontrol ediliyor.",
   "Projelerim sizin hakkınızda hiçbir şey toplamaz: analitik, çerez ya da reklam yok. Bu sayfa da başka "
   "sitelerden hiçbir şey yüklemiyor, kaynak kodu da bunu gösteriyor.",
   "Kodun tamamı MIT lisansıyla açık. Belgeleri güncel tutuyor, sorulara ve hata bildirimlerine yanıt veriyorum."],
@@ -394,7 +451,7 @@ T = {
  "stack": ["Diller", "Veritabanları", "Sunucular ve CI"],
  "contact_h": "İletişim",
  "contact": "Sorular, hata bildirimleri ve fikirler için ilgili projenin issue bölümünü kullanın: [Crypto Research "
-            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Ana dilim Rusça, "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Ana dilim Rusça, "
             "İngilizce de olur; Türkçe de yazabilirsiniz, çeviri aracı kullanırım.",
  "foot_privacy": "Bu sayfa çerez ya da analitik kullanmaz ve başka sitelerden hiçbir şey yüklemez.",
  "foot_src": "Sayfanın kaynak kodu",
@@ -403,8 +460,7 @@ T = {
 
 "vi": {
  "title": "Max (f1devbin): lập trình viên và kỹ sư điện tử",
- "desc": "Max, lập trình viên và kỹ sư điện tử. Mã nguồn mở: phòng thí nghiệm trung thực về giao dịch crypto, công "
-         "cụ web cho bot Telegram và tiện ích KDE Plasma 6.",
+ "desc": "Max, lập trình viên và kỹ sư điện tử. Mã nguồn mở: phòng thí nghiệm giao dịch crypto, công cụ Telegram, tiện ích KDE Plasma 6 và bộ điều phối Zigbee cho Home Assistant.",
  "og_line": "Lập trình viên và kỹ sư điện tử", "job": "Kỹ sư điện tử",
  "skip": "Chuyển đến nội dung", "lang_label": "Ngôn ngữ",
  "h1": "Xin chào, tôi là Max",
@@ -454,10 +510,22 @@ T = {
  "myip_cap": "Địa chỉ trong ảnh thuộc về một máy chủ VPN.",
  "myip_alt": "Tiện ích My IP & Geo: IP công khai, vị trí, nhà cung cấp, tải hệ thống và lưu lượng",
  "myip_cta": "Tải tiện ích",
+ "c6_what": "Biến một bo mạch ESP32-C6 giá rẻ thành bộ điều phối Zigbee cho Home Assistant: nạp firmware từ trình duyệt, cắm vào, bấm “Thêm”.",
+ "c6_story": "Home Assistant nhận ra các USB Zigbee mua sẵn qua tên USB của chúng, nhưng mọi ESP32-C6 đều báo cùng một tên chung, nên trước đây bộ điều phối tự làm phải sửa cấu hình bằng tay. Tích hợp của tôi hỏi bo mạch qua giao thức ZBOSS xem nó có thật là bộ điều phối không, rồi tự cài và cấu hình Zigbee2MQTT, và khởi động lại nó nếu USB bị rút ra rồi cắm lại. Firmware là của Espressif, được nạp ngay từ trang web, không cần cài gì lên máy tính.",
+ "c6_proof": "[Trang firmware](c6_live) có phần hỏi đáp, còn README giải thích [cách hoạt động](c6_how) bằng tiếng Anh.",
+ "c6_cap": "Trang firmware: chỉ một nút là nạp xong bo mạch.",
+ "c6_alt": "Trang firmware của C6 Zigbee Stick với nút cài đặt",
+ "c6_cta": "Nạp firmware",
+ "gbc_what": "Bản tin Telegram hằng ngày về tin tức xe đạp ở Belarus và Grodno, kèm thời tiết và tỷ giá.",
+ "gbc_story": "Mỗi ngày vào buổi trưa theo giờ Minsk, một tác vụ GitHub Actions thu thập tin tức, một mô hình AI chọn những tin hay nhất và viết lại với giọng thân thiện, rồi bài đăng được gửi lên kênh. Tin chính trị, tai nạn và tội phạm bị lọc hai lần: bằng từ khóa và bằng chỉ dẫn cho mô hình. Nếu AI không dùng được, một bản tin đơn giản vẫn được đăng, và tin đã đăng sẽ không lặp lại. Không cần máy chủ hay máy tính bật sẵn, và bạn có thể chạy bản sao riêng cho bất kỳ kênh nào.",
+ "gbc_proof": "Mọi số bản tin cũng có trên [trang web](gbc_site), kèm nguồn RSS (bằng tiếng Nga).",
+ "gbc_cap": "Một bài đăng mẫu.",
+ "gbc_alt": "Bài đăng bản tin GrodnoBikeClub trên Telegram: tin xe đạp, thời tiết và tỷ giá",
+ "gbc_cta": "Mở kênh",
  "how_h": "Cách tôi làm việc",
  "how": [
   "Tôi không ghi vào README điều gì mà mình chưa tự kiểm tra. Ở phòng thí nghiệm, việc kiểm tra là một phần của "
-  "phương pháp; các dự án khác có kiểm thử tự động chạy trên GitHub Actions mỗi khi có thay đổi.",
+  "phương pháp; các dự án khác được kiểm tra tự động trên GitHub Actions.",
   "Các dự án của tôi không thu thập gì về bạn: không công cụ phân tích, không cookie, không quảng cáo. Trang này "
   "cũng không tải gì từ trang web khác, và mã nguồn của nó cho thấy điều đó.",
   "Toàn bộ mã nguồn mở theo giấy phép MIT. Tôi luôn cập nhật tài liệu và trả lời câu hỏi cũng như báo lỗi."],
@@ -465,7 +533,7 @@ T = {
  "stack": ["Ngôn ngữ", "Cơ sở dữ liệu", "Máy chủ và CI"],
  "contact_h": "Liên hệ",
  "contact": "Câu hỏi, báo lỗi và ý tưởng xin gửi vào mục issues của từng dự án: [Crypto Research Labs](crl_issues), "
-            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues). Tiếng mẹ đẻ của tôi là tiếng Nga, tiếng "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Tiếng mẹ đẻ của tôi là tiếng Nga, tiếng "
             "Anh cũng được, và bạn cứ viết bằng tiếng Việt, tôi sẽ dùng công cụ dịch.",
  "foot_privacy": "Trang này không dùng cookie hay công cụ phân tích và không tải gì từ trang web khác.",
  "foot_src": "Mã nguồn của trang",
@@ -474,8 +542,7 @@ T = {
 
 "zh": {
  "title": "Max（f1devbin）：程序员、电子工程师",
- "desc": "我是 Max，程序员、电子工程师。开源项目：诚实检验加密货币交易想法的实验室、在浏览器里设置 Telegram "
-         "机器人的工具，以及一个 KDE Plasma 6 小部件。",
+ "desc": "我是 Max，程序员、电子工程师。开源项目：加密货币交易研究实验室、Telegram 工具、KDE Plasma 6 小部件，以及 Home Assistant 用的 Zigbee 协调器。",
  "og_line": "程序员、电子工程师", "job": "电子工程师",
  "skip": "跳到正文", "lang_label": "语言",
  "h1": "你好，我是 Max",
@@ -515,10 +582,22 @@ T = {
  "myip_cap": "截图中的地址属于一台 VPN 服务器。",
  "myip_alt": "My IP & Geo 小部件：公网 IP、位置、运营商、系统负载和流量",
  "myip_cta": "下载小部件",
+ "c6_what": "把一块便宜的 ESP32-C6 开发板变成 Home Assistant 的 Zigbee 协调器：在浏览器里刷固件，插上 USB，点“添加”。",
+ "c6_story": "Home Assistant 靠 USB 名称识别现成的 Zigbee 适配器，但所有 ESP32-C6 报出的都是同一个通用名称，所以自制协调器以前只能手动改配置。我的集成会通过 ZBOSS 协议询问开发板是否真的是协调器，然后自动安装并配置 Zigbee2MQTT，适配器拔下再插上时还会自动重启它。固件来自 Espressif，直接在网页上刷写，电脑上什么都不用装。",
+ "c6_proof": "[固件页面](c6_live)有常见问题解答，README 用英文说明了[工作原理](c6_how)。",
+ "c6_cap": "固件页面：一个按钮就能刷好开发板。",
+ "c6_alt": "C6 Zigbee Stick 固件页面和安装按钮",
+ "c6_cta": "刷写固件",
+ "gbc_what": "每天在 Telegram 推送白俄罗斯和格罗德诺的自行车新闻摘要，附天气和汇率。",
+ "gbc_story": "每天明斯克时间中午，GitHub Actions 任务会收集新闻，AI 模型挑出最好的几条并用友好的语气改写，然后发到频道。政治、事故和犯罪新闻会被过滤两次：先按关键词，再按给模型的指令。AI 不可用时照样发出一份简单摘要，已经发过的新闻不会重复。不需要服务器，也不需要电脑一直开着，你也可以为任何频道运行自己的副本。",
+ "gbc_proof": "每一期也都在[网站](gbc_site)上，并提供 RSS 订阅（俄语）。",
+ "gbc_cap": "示例帖子。",
+ "gbc_alt": "GrodnoBikeClub 在 Telegram 上的摘要帖子：自行车新闻、天气和汇率",
+ "gbc_cta": "打开频道",
  "how_h": "我怎么做事",
  "how": [
-  "我不会在 README 里写任何自己没验证过的东西。在实验室里，验证本身就是方法的一部分；其他项目都有自动化测试，"
-  "每次改动都会在 GitHub Actions 上运行。",
+  "我不会在 README 里写任何自己没验证过的东西。在实验室里，验证本身就是方法的一部分；其他项目都在 "
+  "GitHub Actions 上自动检查。",
   "我的项目不收集你的任何信息：没有统计分析，没有 cookie，没有广告。这个页面也不从其他网站加载任何内容，"
   "看源代码就知道。",
   "所有代码都以 MIT 许可证开源。我会及时更新文档，也会回复提问和错误报告。"],
@@ -526,7 +605,7 @@ T = {
  "stack": ["语言", "数据库", "服务器与 CI"],
  "contact_h": "联系我",
  "contact": "问题、错误报告和想法，请提交到对应项目的 issues：[Crypto Research Labs](crl_issues)、"
-            "[Telegram Bot Manager](tbm_issues)、[My IP & Geo](myip_issues)。我的母语是俄语，英语也可以；"
+            "[Telegram Bot Manager](tbm_issues)、[My IP & Geo](myip_issues)、[C6 Zigbee Stick](c6_issues)、[GrodnoBikeClub](gbc_issues)。我的母语是俄语，英语也可以；"
             "用中文写也没问题，我会用翻译工具。",
  "foot_privacy": "本页面不使用 cookie 和统计分析，也不从其他网站加载任何内容。",
  "foot_src": "本页面的源代码",
@@ -670,6 +749,12 @@ def links(lang: str) -> dict:
         "myip_privacy": f"{GH}/my-ip-geo-plasma6#network-access-and-privacy",
         "crl_issues": f"{GH}/Crypto-Research-Labs/issues", "tbm_issues": f"{GH}/telegram-bot-manager/issues",
         "myip_issues": f"{GH}/my-ip-geo-plasma6/issues",
+        "c6_live": f"{BASE}c6-zigbee-stick/" + ("ru/" if lang == "ru" else ""), "c6_repo": f"{GH}/c6-zigbee-stick",
+        "c6_how": (f"{GH}/c6-zigbee-stick/blob/main/README.ru.md#как-это-устроено" if lang == "ru"
+                   else f"{GH}/c6-zigbee-stick#how-it-works"),
+        "c6_issues": f"{GH}/c6-zigbee-stick/issues",
+        "gbc_live": "https://t.me/GrodnoBikeClub", "gbc_site": f"{BASE}GrodnoBikeClub/",
+        "gbc_repo": f"{GH}/GrodnoBikeClub", "gbc_issues": f"{GH}/GrodnoBikeClub/issues",
         "gh": GH, "src": f"{GH}/f1devbin.github.io",
     }
 
@@ -753,6 +838,16 @@ def page(lang: str, css_ver: str, now: str) -> str:
                   "@type": "SoftwareSourceCode", "name": "My IP & Geo", "url": L["myip_repo"],
                   "description": plain(s["myip_what"]), "codeRepository": L["myip_repo"],
                   "programmingLanguage": ["QML", "JavaScript"], "runtimePlatform": "KDE Plasma 6",
+                  "license": "https://opensource.org/licenses/MIT", "author": who}},
+              {"@type": "ListItem", "position": 4, "item": {
+                  "@type": "SoftwareSourceCode", "name": "C6 Zigbee Stick", "url": L["c6_live"],
+                  "description": plain(s["c6_what"]), "codeRepository": L["c6_repo"],
+                  "programmingLanguage": "Python", "runtimePlatform": "Home Assistant",
+                  "license": "https://opensource.org/licenses/MIT", "author": who}},
+              {"@type": "ListItem", "position": 5, "item": {
+                  "@type": "SoftwareSourceCode", "name": "GrodnoBikeClub", "url": L["gbc_repo"],
+                  "description": plain(s["gbc_what"]), "codeRepository": L["gbc_repo"],
+                  "programmingLanguage": "Python", "runtimePlatform": "GitHub Actions",
                   "license": "https://opensource.org/licenses/MIT", "author": who}}]}]
     ld_json = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
 
@@ -782,8 +877,8 @@ def page(lang: str, css_ver: str, now: str) -> str:
 
     def project(pid: str, name: str) -> str:
         w, h = SIZES[pid]
-        if pid == "myip":
-            img = (f'<img src="{up}assets/myip.webp" width="{w}" height="{h}" alt="{e(s[pid + "_alt"])}" '
+        if pid in TALL:
+            img = (f'<img src="{up}assets/{pid}.webp" width="{w}" height="{h}" alt="{e(s[pid + "_alt"])}" '
                    'loading="lazy" decoding="async">')
         else:
             srcset = ", ".join(f"{up}assets/{pid}-{x}.webp {x}w" for x in (640, 960, 1280))
@@ -796,7 +891,7 @@ def page(lang: str, css_ver: str, now: str) -> str:
                 f'<p>{r(s[pid + "_proof"])}</p>\n'
                 f'<p class="actions"><a class="btn primary" href="{e(L[pid + "_live"])}">{e(s[pid + "_cta"])}</a> '
                 f'<a class="btn" href="{e(L[pid + "_repo"])}">{e(s["source"])}</a></p>\n</div>\n'
-                f'<figure class="shot{" tall" if pid == "myip" else ""}">{img}'
+                f'<figure class="shot{" tall" if pid in TALL else ""}">{img}'
                 f'<figcaption>{e(s[pid + "_cap"])}</figcaption></figure>\n</article>')
 
     lead = ' class="lead"'
@@ -828,6 +923,8 @@ def page(lang: str, css_ver: str, now: str) -> str:
 {project("crl", "Crypto Research Labs")}
 {project("tbm", "Telegram Bot Manager")}
 {project("myip", "My IP & Geo")}
+{project("c6", "C6 Zigbee Stick")}
+{project("gbc", "GrodnoBikeClub")}
 </div>
 </section>
 <section aria-labelledby="how">
