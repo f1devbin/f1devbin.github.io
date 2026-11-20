@@ -5,7 +5,7 @@
         --crl ../Crypto-Research-Labs/docs/screenshots/dashboard.png \
         --tbm ../telegram-bot-manager/docs/screenshots/webhook.png \
         --myip ../my-ip-geo-plasma6/screenshots/main.png \
-        --c6 c6-flasher.png --gbc ../GrodnoBikeClub/mockup.png
+        --c6 c6-flasher.png --grbl grbl-panel.png
 
 Needs Pillow, numpy, scipy, fonttools and brotli. Writes assets/cat.webp (the widget's cat as a die-cut sticker, the
 "IP & Geo" lettering left out; the drawing itself is not changed), the project screenshots,
@@ -183,7 +183,7 @@ def main():
     ap.add_argument("--tbm", type=Path)
     ap.add_argument("--myip", type=Path)
     ap.add_argument("--c6", type=Path, help="screenshot of the C6 Zigbee Stick flasher page, 1280 px wide")
-    ap.add_argument("--gbc", type=Path, help="GrodnoBikeClub mockup.png")
+    ap.add_argument("--grbl", type=Path, help="screenshot of the GRBL Wi-Fi Bridge web panel with example data, 1280 px wide")
     a = ap.parse_args()
     (ASSETS / "og").mkdir(parents=True, exist_ok=True)
     sizes_file = ASSETS / "sizes.json"
@@ -199,8 +199,8 @@ def main():
         myip = Image.open(a.myip)
         myip.save(ASSETS / "myip.webp", "WEBP", quality=88, method=6)
         sizes["myip"] = myip.size
-    if a.gbc:
-        sizes["gbc"] = tall(a.gbc, "gbc")
+    if a.grbl:
+        sizes["grbl"] = shot(a.grbl, (0, 0, 1280, 640), "grbl", (640, 960, 1280))
 
     if a.icon:
         cat = sticker(a.icon)
