@@ -26,8 +26,8 @@ LANGS = {"en": ("English", "en", "en_US"), "ru": ("Русский", "ru", "ru_RU
          "pt": ("Português", "pt-BR", "pt_BR"), "tr": ("Türkçe", "tr", "tr_TR"), "vi": ("Tiếng Việt", "vi", "vi_VN"),
          "zh": ("中文", "zh-Hans", "zh_CN")}
 PROJECT_SITEMAPS = ["Crypto-Research-Labs/sitemap.xml", "telegram-bot-manager/sitemap.xml", "c6-zigbee-stick/sitemap.xml",
-                    "GrodnoBikeClub/sitemap.xml"]
-TALL = {"myip", "gbc"}  # portrait screenshots, shown narrower
+                    "grbl-wifi-bridge/sitemap.xml"]
+TALL = {"myip"}  # portrait screenshots, shown narrower
 TBM_LANGS = ("ru", "es", "pt", "zh")  # Telegram Bot Manager has these besides English
 # connect-src only lets audit tools (Lighthouse) read robots.txt; the page itself has no scripts
 CSP = ("default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self'; "
@@ -96,12 +96,12 @@ T = {
  "c6_cap": "The firmware page: one button flashes the board.",
  "c6_alt": "C6 Zigbee Stick firmware page with the Install firmware button",
  "c6_cta": "Flash the firmware",
- "gbc_what": "A daily Telegram digest of cycling news from Belarus and Grodno, with the weather and exchange rates.",
- "gbc_story": "Every day at noon Minsk time a GitHub Actions job collects the news, an AI model picks the best items and rewrites them in a friendly tone, and the post goes to the channel. Politics, accidents and crime are filtered out twice: by stop words and by the model’s instructions. If the AI is unavailable, a plain digest goes out anyway, and news that was already posted never repeats. No server and no computer has to stay on, and you can run your own copy for any channel.",
- "gbc_proof": "Every issue is also on the [website](gbc_site), with an RSS feed.",
- "gbc_cap": "A sample post.",
- "gbc_alt": "GrodnoBikeClub digest post in Telegram: cycling news, weather and exchange rates",
- "gbc_cta": "Open the channel",
+ "grbl_what": "Runs a GRBL laser engraver or CNC router over Wi-Fi: an ESP32-S3 plugs into the machine’s USB port and LightBurn connects to it over the network.",
+ "grbl_story": "Hobby laser engravers and 3018 routers want a laptop on a USB cable right next to them. The bridge takes the laptop’s place: the ESP32-S3 works as a USB host for the machine’s own serial chip and passes GRBL to a TCP port unchanged, so LightBurn and Universal Gcode Sender work as before. If the connection drops in the middle of a job, it stops the machine and switches the laser off. The machine itself needs no changes, and the web panel has a big STOP button and a GRBL console.",
+ "grbl_proof": "The [firmware page](grbl_live) flashes the board and sets up Wi-Fi in one go and answers common questions; the README lists the [safety rules](grbl_safety).",
+ "grbl_cap": "The bridge’s web panel. Everything in the screenshot is example data.",
+ "grbl_alt": "GRBL Wi-Fi Bridge web panel: machine status, STOP button and GRBL console",
+ "grbl_cta": "Flash the firmware",
  "how_h": "How I work",
  "how": [
   "I don’t write anything in a README that I haven’t checked myself. In the lab the checking is part of the "
@@ -114,7 +114,7 @@ T = {
  "stack": ["Languages", "Databases", "Servers and CI"],
  "contact_h": "Get in touch",
  "contact": "Questions, bug reports and ideas are welcome in the issues of the project: [Crypto Research "
-            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Russian is my native "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GRBL Wi-Fi Bridge](grbl_issues). Russian is my native "
             "language and English is fine too. You can also write in your own language; I’ll use a translator.",
  "foot_privacy": "This page uses no cookies or analytics and loads nothing from other sites.",
  "foot_src": "Page source",
@@ -180,12 +180,12 @@ T = {
  "c6_cap": "Страница прошивки: плата прошивается одной кнопкой.",
  "c6_alt": "Страница прошивки C6 Zigbee Stick с кнопкой установки",
  "c6_cta": "Прошить плату",
- "gbc_what": "Ежедневный дайджест велоновостей Беларуси и Гродно в Telegram, с погодой и курсами валют.",
- "gbc_story": "Каждый день в полдень по Минску задача в GitHub Actions собирает новости, ИИ-модель отбирает лучшие и переписывает их в доброжелательном тоне, а готовый пост уходит в канал. Политика, ДТП и криминал отсеиваются дважды: по стоп-словам и инструкцией для модели. Если ИИ недоступен, выходит обычный дайджест без него, а уже опубликованные новости не повторяются. Ни сервер, ни включённый компьютер не нужны, а свою копию можно запустить для любого канала.",
- "gbc_proof": "Все выпуски есть и на [сайте](gbc_site), с RSS-лентой.",
- "gbc_cap": "Пример поста.",
- "gbc_alt": "Пост дайджеста GrodnoBikeClub в Telegram: велоновости, погода и курсы валют",
- "gbc_cta": "Открыть канал",
+ "grbl_what": "Управление GRBL-гравером или фрезером по Wi-Fi: ESP32-S3 подключается к USB-порту станка, а LightBurn работает с ней по сети.",
+ "grbl_story": "Любительским лазерным граверам и фрезерам 3018 нужен ноутбук на USB-кабеле прямо рядом со станком. Мост занимает место ноутбука: ESP32-S3 работает как USB host для собственного USB-чипа станка и без изменений передаёт GRBL на TCP-порт, поэтому LightBurn и Universal Gcode Sender работают как раньше. Если связь оборвётся посреди задания, мост остановит станок и выключит лазер. Сам станок переделывать не нужно, а в веб-панели есть большая кнопка СТОП и консоль GRBL.",
+ "grbl_proof": "[Страница прошивки](grbl_live) за один раз прошивает плату и настраивает Wi-Fi и отвечает на частые вопросы, а в README описаны [правила безопасности](grbl_safety).",
+ "grbl_cap": "Веб-панель моста. Всё на снимке — пример данных.",
+ "grbl_alt": "Веб-панель GRBL Wi-Fi Bridge: состояние станка, кнопка СТОП и консоль GRBL",
+ "grbl_cta": "Прошить плату",
  "how_h": "Как я работаю",
  "how": [
   "Я не пишу в README того, что не проверил сам. В лаборатории проверка заложена в сам метод, а остальные "
@@ -198,7 +198,7 @@ T = {
  "stack": ["Языки", "Базы данных", "Серверы и CI"],
  "contact_h": "Как со мной связаться",
  "contact": "Вопросы, ошибки и идеи пишите в issues нужного проекта: [Crypto Research Labs](crl_issues), "
-            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Отвечаю по-русски и по-английски.",
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GRBL Wi-Fi Bridge](grbl_issues). Отвечаю по-русски и по-английски.",
  "foot_privacy": "Эта страница не использует cookies и аналитику и ничего не загружает с других сайтов.",
  "foot_src": "Исходный код страницы",
  "nf_title": "Страница не найдена", "nf_text": "Такой страницы здесь нет. Возможно, она переехала.",
@@ -266,12 +266,12 @@ T = {
  "c6_cap": "La página del firmware: la placa se flashea con un botón.",
  "c6_alt": "Página del firmware de C6 Zigbee Stick con el botón de instalación",
  "c6_cta": "Flashear el firmware",
- "gbc_what": "Un resumen diario en Telegram de noticias de ciclismo de Bielorrusia y Grodno, con el tiempo y los tipos de cambio.",
- "gbc_story": "Cada día a mediodía (hora de Minsk), una tarea de GitHub Actions recoge las noticias, un modelo de IA elige las mejores y las reescribe en tono amable, y la publicación llega al canal. La política, los accidentes y los sucesos se filtran dos veces: por palabras clave y por las instrucciones del modelo. Si la IA no está disponible, sale igualmente un resumen sencillo, y lo ya publicado no se repite. No hace falta servidor ni ordenador encendido, y puedes montar tu propia copia para cualquier canal.",
- "gbc_proof": "Todos los números están también en la [web](gbc_site), con canal RSS (en ruso).",
- "gbc_cap": "Una publicación de ejemplo.",
- "gbc_alt": "Publicación del resumen GrodnoBikeClub en Telegram: noticias de ciclismo, tiempo y tipos de cambio",
- "gbc_cta": "Abrir el canal",
+ "grbl_what": "Controla por Wi-Fi un grabador láser o una fresadora CNC con GRBL: un ESP32-S3 se conecta al puerto USB de la máquina y LightBurn se conecta a él por la red.",
+ "grbl_story": "Los grabadores láser y las fresadoras 3018 domésticas piden un portátil con cable USB justo al lado. El puente ocupa el lugar del portátil: el ESP32-S3 actúa como host USB para el chip serie de la propia máquina y pasa GRBL a un puerto TCP sin cambios, así que LightBurn y Universal Gcode Sender funcionan como antes. Si la conexión se corta en mitad de un trabajo, detiene la máquina y apaga el láser. La máquina no necesita cambios, y el panel web tiene un gran botón STOP y una consola GRBL.",
+ "grbl_proof": "La [página del firmware](grbl_live) graba la placa y configura el Wi-Fi de una vez y responde a las preguntas frecuentes; el README recoge las [reglas de seguridad](grbl_safety).",
+ "grbl_cap": "El panel web del puente. Todo en la captura son datos de ejemplo.",
+ "grbl_alt": "Panel web de GRBL Wi-Fi Bridge: estado de la máquina, botón STOP y consola GRBL",
+ "grbl_cta": "Grabar el firmware",
  "how_h": "Cómo trabajo",
  "how": [
   "No escribo en un README nada que no haya comprobado yo mismo. En el laboratorio, la comprobación forma parte "
@@ -284,7 +284,7 @@ T = {
  "stack": ["Lenguajes", "Bases de datos", "Servidores y CI"],
  "contact_h": "Contacto",
  "contact": "Las preguntas, los errores y las ideas van a los issues de cada proyecto: [Crypto Research "
-            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Mi lengua materna es "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GRBL Wi-Fi Bridge](grbl_issues). Mi lengua materna es "
             "el ruso y el inglés también me va bien, pero puedes escribirme en español: usaré un traductor.",
  "foot_privacy": "Esta página no usa cookies ni analítica y no carga nada de otros sitios.",
  "foot_src": "Código fuente de la página",
@@ -350,12 +350,12 @@ T = {
  "c6_cap": "A página do firmware: a placa é gravada com um botão.",
  "c6_alt": "Página do firmware do C6 Zigbee Stick com o botão de instalação",
  "c6_cta": "Gravar o firmware",
- "gbc_what": "Um resumo diário no Telegram com notícias de ciclismo da Bielorrússia e de Grodno, além do tempo e do câmbio.",
- "gbc_story": "Todo dia ao meio-dia (horário de Minsk), uma tarefa do GitHub Actions coleta as notícias, um modelo de IA escolhe as melhores e as reescreve em tom amigável, e o post vai para o canal. Política, acidentes e crimes são filtrados duas vezes: por palavras-chave e pelas instruções do modelo. Se a IA estiver fora do ar, sai mesmo assim um resumo simples, e o que já foi publicado não se repete. Não precisa de servidor nem de computador ligado, e dá para rodar sua própria cópia para qualquer canal.",
- "gbc_proof": "Todas as edições também estão no [site](gbc_site), com feed RSS (em russo).",
- "gbc_cap": "Um post de exemplo.",
- "gbc_alt": "Post do resumo GrodnoBikeClub no Telegram: notícias de ciclismo, tempo e câmbio",
- "gbc_cta": "Abrir o canal",
+ "grbl_what": "Controle pelo Wi-Fi uma gravadora a laser ou uma fresadora CNC com GRBL: um ESP32-S3 se conecta à porta USB da máquina e o LightBurn se conecta a ele pela rede.",
+ "grbl_story": "Gravadoras a laser e fresadoras 3018 caseiras pedem um notebook com cabo USB bem ao lado. A ponte ocupa o lugar do notebook: o ESP32-S3 atua como host USB para o chip serial da própria máquina e repassa o GRBL para uma porta TCP sem alterações, então o LightBurn e o Universal Gcode Sender funcionam como antes. Se a conexão cair no meio de um trabalho, ela para a máquina e desliga o laser. A máquina não precisa de mudanças, e o painel web tem um grande botão STOP e um console GRBL.",
+ "grbl_proof": "A [página do firmware](grbl_live) grava a placa e configura o Wi-Fi de uma vez e responde às perguntas frequentes; o README traz as [regras de segurança](grbl_safety).",
+ "grbl_cap": "O painel web da ponte. Tudo na captura são dados de exemplo.",
+ "grbl_alt": "Painel web do GRBL Wi-Fi Bridge: estado da máquina, botão STOP e console GRBL",
+ "grbl_cta": "Gravar o firmware",
  "how_h": "Como eu trabalho",
  "how": [
   "Não escrevo num README nada que eu mesmo não tenha verificado. No laboratório, a verificação faz parte do "
@@ -368,7 +368,7 @@ T = {
  "stack": ["Linguagens", "Bancos de dados", "Servidores e CI"],
  "contact_h": "Contato",
  "contact": "Dúvidas, bugs e ideias vão para as issues de cada projeto: [Crypto Research Labs](crl_issues), "
-            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Minha língua materna é o russo, e inglês "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GRBL Wi-Fi Bridge](grbl_issues). Minha língua materna é o russo, e inglês "
             "também serve, mas pode escrever em português: eu uso um tradutor.",
  "foot_privacy": "Esta página não usa cookies nem analytics e não carrega nada de outros sites.",
  "foot_src": "Código-fonte da página",
@@ -434,12 +434,12 @@ T = {
  "c6_cap": "Yazılım sayfası: kart tek düğmeyle programlanır.",
  "c6_alt": "C6 Zigbee Stick yazılım sayfası ve yükleme düğmesi",
  "c6_cta": "Yazılımı yükle",
- "gbc_what": "Belarus ve Grodno’dan bisiklet haberlerini hava durumu ve döviz kurlarıyla birlikte her gün Telegram’a getiren bir özet.",
- "gbc_story": "Her gün Minsk saatiyle öğlen bir GitHub Actions görevi haberleri toplar, bir yapay zekâ modeli en iyilerini seçip dostça bir dille yeniden yazar ve gönderi kanala gider. Siyaset, kazalar ve suç haberleri iki kez elenir: yasaklı kelimelerle ve modelin talimatlarıyla. Yapay zekâ erişilemezse yine de sade bir özet çıkar, yayımlanmış haberler tekrarlanmaz. Sunucuya ya da açık bir bilgisayara gerek yoktur; kendi kopyanızı herhangi bir kanal için çalıştırabilirsiniz.",
- "gbc_proof": "Tüm sayılar RSS akışıyla birlikte [web sitesinde](gbc_site) de var (Rusça).",
- "gbc_cap": "Örnek bir gönderi.",
- "gbc_alt": "Telegram’da GrodnoBikeClub özet gönderisi: bisiklet haberleri, hava durumu ve döviz kurları",
- "gbc_cta": "Kanalı aç",
+ "grbl_what": "GRBL lazer kazıma makinesini veya CNC frezeyi Wi-Fi üzerinden kullanın: ESP32-S3 makinenin USB portuna takılır, LightBurn ona ağ üzerinden bağlanır.",
+ "grbl_story": "Hobi lazer kazıma makineleri ve 3018 frezeler yanı başlarında USB kablolu bir dizüstü bilgisayar ister. Köprü bu bilgisayarın yerini alır: ESP32-S3, makinenin kendi seri çipi için USB host olarak çalışır ve GRBL’i değiştirmeden bir TCP portuna aktarır; böylece LightBurn ve Universal Gcode Sender eskisi gibi çalışır. Bağlantı bir işin ortasında koparsa makineyi durdurur ve lazeri kapatır. Makinede değişiklik gerekmez; web panelinde büyük bir STOP düğmesi ve GRBL konsolu vardır.",
+ "grbl_proof": "[Yazılım sayfası](grbl_live) kartı yazar ve Wi-Fi’yi tek seferde kurar, sık sorulan soruları yanıtlar; README’de [güvenlik kuralları](grbl_safety) yer alır.",
+ "grbl_cap": "Köprünün web paneli. Ekran görüntüsündeki her şey örnek veridir.",
+ "grbl_alt": "GRBL Wi-Fi Bridge web paneli: makine durumu, STOP düğmesi ve GRBL konsolu",
+ "grbl_cta": "Yazılımı yükle",
  "how_h": "Nasıl çalışıyorum",
  "how": [
   "Kendim kontrol etmediğim hiçbir şeyi README'ye yazmam. Laboratuvarda kontrol yöntemin bir parçası; diğer "
@@ -451,7 +451,7 @@ T = {
  "stack": ["Diller", "Veritabanları", "Sunucular ve CI"],
  "contact_h": "İletişim",
  "contact": "Sorular, hata bildirimleri ve fikirler için ilgili projenin issue bölümünü kullanın: [Crypto Research "
-            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Ana dilim Rusça, "
+            "Labs](crl_issues), [Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GRBL Wi-Fi Bridge](grbl_issues). Ana dilim Rusça, "
             "İngilizce de olur; Türkçe de yazabilirsiniz, çeviri aracı kullanırım.",
  "foot_privacy": "Bu sayfa çerez ya da analitik kullanmaz ve başka sitelerden hiçbir şey yüklemez.",
  "foot_src": "Sayfanın kaynak kodu",
@@ -516,12 +516,12 @@ T = {
  "c6_cap": "Trang firmware: chỉ một nút là nạp xong bo mạch.",
  "c6_alt": "Trang firmware của C6 Zigbee Stick với nút cài đặt",
  "c6_cta": "Nạp firmware",
- "gbc_what": "Bản tin Telegram hằng ngày về tin tức xe đạp ở Belarus và Grodno, kèm thời tiết và tỷ giá.",
- "gbc_story": "Mỗi ngày vào buổi trưa theo giờ Minsk, một tác vụ GitHub Actions thu thập tin tức, một mô hình AI chọn những tin hay nhất và viết lại với giọng thân thiện, rồi bài đăng được gửi lên kênh. Tin chính trị, tai nạn và tội phạm bị lọc hai lần: bằng từ khóa và bằng chỉ dẫn cho mô hình. Nếu AI không dùng được, một bản tin đơn giản vẫn được đăng, và tin đã đăng sẽ không lặp lại. Không cần máy chủ hay máy tính bật sẵn, và bạn có thể chạy bản sao riêng cho bất kỳ kênh nào.",
- "gbc_proof": "Mọi số bản tin cũng có trên [trang web](gbc_site), kèm nguồn RSS (bằng tiếng Nga).",
- "gbc_cap": "Một bài đăng mẫu.",
- "gbc_alt": "Bài đăng bản tin GrodnoBikeClub trên Telegram: tin xe đạp, thời tiết và tỷ giá",
- "gbc_cta": "Mở kênh",
+ "grbl_what": "Điều khiển máy khắc laser hoặc máy phay CNC chạy GRBL qua Wi-Fi: ESP32-S3 cắm vào cổng USB của máy, còn LightBurn kết nối với nó qua mạng.",
+ "grbl_story": "Máy khắc laser và máy phay 3018 dân dụng cần một chiếc laptop nối cáp USB ngay bên cạnh. Cầu nối thay chỗ chiếc laptop đó: ESP32-S3 làm USB host cho chip serial của chính máy và chuyển GRBL sang một cổng TCP nguyên vẹn, nên LightBurn và Universal Gcode Sender vẫn hoạt động như trước. Nếu kết nối bị ngắt giữa chừng, nó dừng máy và tắt laser. Máy không cần sửa đổi gì, và bảng điều khiển web có nút STOP lớn cùng console GRBL.",
+ "grbl_proof": "[Trang firmware](grbl_live) nạp firmware và cài Wi-Fi trong một lần, kèm phần hỏi đáp; README nêu [các quy tắc an toàn](grbl_safety).",
+ "grbl_cap": "Bảng điều khiển web của cầu nối. Mọi thứ trong ảnh là dữ liệu mẫu.",
+ "grbl_alt": "Bảng điều khiển web GRBL Wi-Fi Bridge: trạng thái máy, nút STOP và console GRBL",
+ "grbl_cta": "Nạp firmware",
  "how_h": "Cách tôi làm việc",
  "how": [
   "Tôi không ghi vào README điều gì mà mình chưa tự kiểm tra. Ở phòng thí nghiệm, việc kiểm tra là một phần của "
@@ -533,7 +533,7 @@ T = {
  "stack": ["Ngôn ngữ", "Cơ sở dữ liệu", "Máy chủ và CI"],
  "contact_h": "Liên hệ",
  "contact": "Câu hỏi, báo lỗi và ý tưởng xin gửi vào mục issues của từng dự án: [Crypto Research Labs](crl_issues), "
-            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GrodnoBikeClub](gbc_issues). Tiếng mẹ đẻ của tôi là tiếng Nga, tiếng "
+            "[Telegram Bot Manager](tbm_issues), [My IP & Geo](myip_issues), [C6 Zigbee Stick](c6_issues), [GRBL Wi-Fi Bridge](grbl_issues). Tiếng mẹ đẻ của tôi là tiếng Nga, tiếng "
             "Anh cũng được, và bạn cứ viết bằng tiếng Việt, tôi sẽ dùng công cụ dịch.",
  "foot_privacy": "Trang này không dùng cookie hay công cụ phân tích và không tải gì từ trang web khác.",
  "foot_src": "Mã nguồn của trang",
@@ -588,12 +588,12 @@ T = {
  "c6_cap": "固件页面：一个按钮就能刷好开发板。",
  "c6_alt": "C6 Zigbee Stick 固件页面和安装按钮",
  "c6_cta": "刷写固件",
- "gbc_what": "每天在 Telegram 推送白俄罗斯和格罗德诺的自行车新闻摘要，附天气和汇率。",
- "gbc_story": "每天明斯克时间中午，GitHub Actions 任务会收集新闻，AI 模型挑出最好的几条并用友好的语气改写，然后发到频道。政治、事故和犯罪新闻会被过滤两次：先按关键词，再按给模型的指令。AI 不可用时照样发出一份简单摘要，已经发过的新闻不会重复。不需要服务器，也不需要电脑一直开着，你也可以为任何频道运行自己的副本。",
- "gbc_proof": "每一期也都在[网站](gbc_site)上，并提供 RSS 订阅（俄语）。",
- "gbc_cap": "示例帖子。",
- "gbc_alt": "GrodnoBikeClub 在 Telegram 上的摘要帖子：自行车新闻、天气和汇率",
- "gbc_cta": "打开频道",
+ "grbl_what": "通过 Wi-Fi 控制 GRBL 激光雕刻机或 CNC 雕铣机：把 ESP32-S3 插到机器的 USB 口上，LightBurn 通过网络连接它。",
+ "grbl_story": "家用激光雕刻机和 3018 雕铣机都需要旁边放一台插着 USB 线的笔记本。这个桥接器取代了那台笔记本：ESP32-S3 作为 USB 主机连接机器自带的串口芯片，把 GRBL 原样转发到 TCP 端口，所以 LightBurn 和 Universal Gcode Sender 照常可用。如果任务进行中连接断开，它会停下机器并关闭激光。机器本身无需改动，网页面板上有一个大大的 STOP 按钮和 GRBL 控制台。",
+ "grbl_proof": "[固件页面](grbl_live)一次完成烧录和 Wi-Fi 设置，并解答常见问题；README 里写明了[安全规则](grbl_safety)。",
+ "grbl_cap": "桥接器的网页面板。截图中的内容都是示例数据。",
+ "grbl_alt": "GRBL Wi-Fi Bridge 网页面板：机器状态、STOP 按钮和 GRBL 控制台",
+ "grbl_cta": "烧录固件",
  "how_h": "我怎么做事",
  "how": [
   "我不会在 README 里写任何自己没验证过的东西。在实验室里，验证本身就是方法的一部分；其他项目都在 "
@@ -605,7 +605,7 @@ T = {
  "stack": ["语言", "数据库", "服务器与 CI"],
  "contact_h": "联系我",
  "contact": "问题、错误报告和想法，请提交到对应项目的 issues：[Crypto Research Labs](crl_issues)、"
-            "[Telegram Bot Manager](tbm_issues)、[My IP & Geo](myip_issues)、[C6 Zigbee Stick](c6_issues)、[GrodnoBikeClub](gbc_issues)。我的母语是俄语，英语也可以；"
+            "[Telegram Bot Manager](tbm_issues)、[My IP & Geo](myip_issues)、[C6 Zigbee Stick](c6_issues)、[GRBL Wi-Fi Bridge](grbl_issues)。我的母语是俄语，英语也可以；"
             "用中文写也没问题，我会用翻译工具。",
  "foot_privacy": "本页面不使用 cookie 和统计分析，也不从其他网站加载任何内容。",
  "foot_src": "本页面的源代码",
@@ -753,8 +753,10 @@ def links(lang: str) -> dict:
         "c6_how": (f"{GH}/c6-zigbee-stick/blob/main/README.ru.md#как-это-устроено" if lang == "ru"
                    else f"{GH}/c6-zigbee-stick#how-it-works"),
         "c6_issues": f"{GH}/c6-zigbee-stick/issues",
-        "gbc_live": "https://t.me/GrodnoBikeClub", "gbc_site": f"{BASE}GrodnoBikeClub/",
-        "gbc_repo": f"{GH}/GrodnoBikeClub", "gbc_issues": f"{GH}/GrodnoBikeClub/issues",
+        "grbl_live": f"{BASE}grbl-wifi-bridge/" + ("ru/" if lang == "ru" else ""),
+        "grbl_repo": f"{GH}/grbl-wifi-bridge", "grbl_issues": f"{GH}/grbl-wifi-bridge/issues",
+        "grbl_safety": (f"{GH}/grbl-wifi-bridge/blob/main/README.ru.md#безопасность" if lang == "ru"
+                        else f"{GH}/grbl-wifi-bridge#safety-notes"),
         "gh": GH, "src": f"{GH}/f1devbin.github.io",
     }
 
@@ -845,9 +847,9 @@ def page(lang: str, css_ver: str, now: str) -> str:
                   "programmingLanguage": "Python", "runtimePlatform": "Home Assistant",
                   "license": "https://opensource.org/licenses/MIT", "author": who}},
               {"@type": "ListItem", "position": 5, "item": {
-                  "@type": "SoftwareSourceCode", "name": "GrodnoBikeClub", "url": L["gbc_repo"],
-                  "description": plain(s["gbc_what"]), "codeRepository": L["gbc_repo"],
-                  "programmingLanguage": "Python", "runtimePlatform": "GitHub Actions",
+                  "@type": "SoftwareSourceCode", "name": "GRBL Wi-Fi Bridge", "url": L["grbl_live"],
+                  "description": plain(s["grbl_what"]), "codeRepository": L["grbl_repo"],
+                  "programmingLanguage": ["C", "JavaScript"], "runtimePlatform": "ESP32-S3",
                   "license": "https://opensource.org/licenses/MIT", "author": who}}]}]
     ld_json = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
 
@@ -924,7 +926,7 @@ def page(lang: str, css_ver: str, now: str) -> str:
 {project("tbm", "Telegram Bot Manager")}
 {project("myip", "My IP & Geo")}
 {project("c6", "C6 Zigbee Stick")}
-{project("gbc", "GrodnoBikeClub")}
+{project("grbl", "GRBL Wi-Fi Bridge")}
 </div>
 </section>
 <section aria-labelledby="how">
